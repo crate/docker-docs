@@ -2,6 +2,17 @@
 
 Documentation for this image is stored in the [`%%REPO%%/` directory](https://github.com/docker-library/docs/tree/master/%%REPO%%) of the [`docker-library/docs` GitHub repo](https://github.com/docker-library/docs). Be sure to familiarize yourself with the [repository's `REAMDE.md` file](https://github.com/docker-library/docs/blob/master/README.md) before attempting a pull request.
 
+Further Documentation about Crate and Docker:
+
+- [Installing and running Crate on Docker](https://crate.io/docs/install/containers/docker/)
+- [First steps with Crate](https://crate.io/docs/reference/hello.html)
+- [Installing Crate on top of Docker](https://crate.io/docs/reference/installation.html#install-using-docker)
+- [Introduction to database scaling: From 0 to 50 nodes in no time](https://crate.io/docs/scale/)
+- [Crate full reference](https://crate.io/docs/scale/)
+- [Configuring production setups with advanced multi node clusters](https://crate.io/docs/scale/multi_node_setup/)
+- [Cross data center clusters with multi zone setups](https://crate.io/docs/scale/multi_zone_setup/)
+
+
 ## Issues
 
 If you have any problems with or questions about this image, please contact us %%MAILING-LIST%% through a [GitHub issue](%%GITHUB-REPO%%/issues).
