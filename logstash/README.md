@@ -1,9 +1,12 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`1.4.5-1-a2bacae`, `1.4.5-1`, `1.4.5`, `1.4` (*1.4/Dockerfile*)](https://github.com/docker-library/logstash/blob/0b9134f8c83f58120bee00efd41f4b5867930016/1.4/Dockerfile)
--	[`1.5.5-1`, `1.5.5`, `1.5`, `1` (*1.5/Dockerfile*)](https://github.com/docker-library/logstash/blob/a250673f3f3a6dec5176041f805d41d6e7fd90b0/1.5/Dockerfile)
--	[`2.0.0-1`, `2.0.0`, `2.0` (*2.0/Dockerfile*)](https://github.com/docker-library/logstash/blob/c218eb120f20b4c8f19e2afb235ff012a5173794/2.0/Dockerfile)
--	[`2.1.0-1`, `2.1.0`, `2.1`, `2`, `latest` (*2.1/Dockerfile*)](https://github.com/docker-library/logstash/blob/a50f6cf48fe5c16ba2c628fffa03733732135e55/2.1/Dockerfile)
+-	[`1.4.5-1-a2bacae`, `1.4.5-1`, `1.4.5`, `1.4` (*1.4/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f3a81ff0f152003653eecd60d0c4e1f05ce99f0/1.4/Dockerfile)
+-	[`1.5.6-1`, `1.5.6`, `1.5`, `1` (*1.5/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f3a81ff0f152003653eecd60d0c4e1f05ce99f0/1.5/Dockerfile)
+-	[`2.0.0-1`, `2.0.0`, `2.0` (*2.0/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f3a81ff0f152003653eecd60d0c4e1f05ce99f0/2.0/Dockerfile)
+-	[`2.1.3-1`, `2.1.3`, `2.1` (*2.1/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f3a81ff0f152003653eecd60d0c4e1f05ce99f0/2.1/Dockerfile)
+-	[`2.2.2-1`, `2.2.2`, `2.2`, `2`, `latest` (*2.2/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f3a81ff0f152003653eecd60d0c4e1f05ce99f0/2.2/Dockerfile)
+
+[![](https://badge.imagelayers.io/logstash:latest.svg)](https://imagelayers.io/?images=logstash:1.4.5-1-a2bacae,logstash:1.5.6-1,logstash:2.0.0-1,logstash:2.1.3-1,logstash:2.2.2-1)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/logstash`)](https://github.com/docker-library/official-images/blob/master/library/logstash). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -15,7 +18,7 @@ Logstash is a tool that can be used to collect, process and forward events and l
 
 > [wikitech.wikimedia.org/wiki/Logstash](https://wikitech.wikimedia.org/wiki/Logstash)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/logstash/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/3a5ee2af49550e2c692a15c339725b4967720db1/logstash/logo.png)
 
 # How to use this image
 
@@ -41,7 +44,7 @@ View [license information](https://github.com/elastic/logstash/blob/master/LICEN
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

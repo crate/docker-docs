@@ -1,11 +1,13 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`6.0.44-jre7`, `6.0-jre7`, `6-jre7`, `6.0.44`, `6.0`, `6` (*6-jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/3b05667011a600a2f46422dd533467eff8e7fecf/6-jre7/Dockerfile)
--	[`6.0.44-jre8`, `6.0-jre8`, `6-jre8` (*6-jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/3b05667011a600a2f46422dd533467eff8e7fecf/6-jre8/Dockerfile)
--	[`7.0.65-jre7`, `7.0-jre7`, `7-jre7`, `7.0.65`, `7.0`, `7` (*7-jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/8c174e038fe911fecc1a920a56afc10fd343bce2/7-jre7/Dockerfile)
--	[`7.0.65-jre8`, `7.0-jre8`, `7-jre8` (*7-jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/8c174e038fe911fecc1a920a56afc10fd343bce2/7-jre8/Dockerfile)
--	[`8.0.29-jre7`, `8.0-jre7`, `8-jre7`, `jre7`, `8.0.29`, `8.0`, `8`, `latest` (*8-jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/4e9726eb5182dd6fe93402485b9db4aae22177e1/8-jre7/Dockerfile)
--	[`8.0.29-jre8`, `8.0-jre8`, `8-jre8`, `jre8` (*8-jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/4e9726eb5182dd6fe93402485b9db4aae22177e1/8-jre8/Dockerfile)
+-	[`6.0.45-jre7`, `6.0-jre7`, `6-jre7`, `6.0.45`, `6.0`, `6` (*6-jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ed98c30c1cd42c53831f64dffa78a0abf7db8e9a/6-jre7/Dockerfile)
+-	[`6.0.45-jre8`, `6.0-jre8`, `6-jre8` (*6-jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ed98c30c1cd42c53831f64dffa78a0abf7db8e9a/6-jre8/Dockerfile)
+-	[`7.0.68-jre7`, `7.0-jre7`, `7-jre7`, `7.0.68`, `7.0`, `7` (*7-jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ed98c30c1cd42c53831f64dffa78a0abf7db8e9a/7-jre7/Dockerfile)
+-	[`7.0.68-jre8`, `7.0-jre8`, `7-jre8` (*7-jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ed98c30c1cd42c53831f64dffa78a0abf7db8e9a/7-jre8/Dockerfile)
+-	[`8.0.32-jre7`, `8.0-jre7`, `8-jre7`, `jre7`, `8.0.32`, `8.0`, `8`, `latest` (*8-jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ed98c30c1cd42c53831f64dffa78a0abf7db8e9a/8-jre7/Dockerfile)
+-	[`8.0.32-jre8`, `8.0-jre8`, `8-jre8`, `jre8` (*8-jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ed98c30c1cd42c53831f64dffa78a0abf7db8e9a/8-jre8/Dockerfile)
+
+[![](https://badge.imagelayers.io/tomcat:latest.svg)](https://imagelayers.io/?images=tomcat:6.0.45-jre7,tomcat:6.0.45-jre8,tomcat:7.0.68-jre7,tomcat:7.0.68-jre8,tomcat:8.0.32-jre7,tomcat:8.0.32-jre8)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/tomcat`)](https://github.com/docker-library/official-images/blob/master/library/tomcat). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -17,7 +19,7 @@ Apache Tomcat (or simply Tomcat) is an open source web server and servlet contai
 
 > [wikipedia.org/wiki/Apache_Tomcat](https://en.wikipedia.org/wiki/Apache_Tomcat)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/tomcat/logo.png)Logo &copy; Apache Software Fountation
+![logo](https://raw.githubusercontent.com/docker-library/docs/8e31eb93a02d504d0cfe1da435aa31b377fc627d/tomcat/logo.png)Logo &copy; Apache Software Fountation
 
 # How to use this image.
 
@@ -59,7 +61,7 @@ View [license information](https://www.apache.org/licenses/LICENSE-2.0) for the 
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

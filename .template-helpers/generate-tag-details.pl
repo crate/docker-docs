@@ -82,6 +82,7 @@ sub get_manifest {
 	my $authorizationHeader = { Authorization => "Bearer $token" };
 
 	my $manifestTx = ua_req(get => "https://registry-1.docker.io/v2/$repo/manifests/$tag" => $authorizationHeader);
+	return () if $manifestTx->res->code == 404; # tag doesn't exist
 	die "failed to get manifest for $image" unless $manifestTx->success;
 	return (
 		$manifestTx->res->headers->header('Docker-Content-Digest'),
@@ -166,6 +167,12 @@ while (my $image = shift) {
 
 	my ($digest, $manifest) = get_manifest($repo, $tag);
 
+	unless (defined $digest && defined $manifest) {
+		# tag must not exist yet!
+		say "\n", '**does not exist** (yet?)';
+		next;
+	}
+
 	print "\n";
 	say '```console';
 	say '$ docker pull ' . $repo . '@' . $digest;
@@ -209,7 +216,7 @@ while (my $image = shift) {
 		say "-\t" . 'Virtual Size: ' . size($data->{virtual_size});
 		say "-\t" . 'v2 Blob: `' . $data->{blob} . '`';
 		say "-\t" . 'v2 Content-Length: ' . size($data->{blob_content_length});
-		say "-\t" . 'v2 Last-Modified: ' . date($data->{blob_last_modified});
+		say "-\t" . 'v2 Last-Modified: ' . date($data->{blob_last_modified}) if $data->{blob_last_modified};
 		$cur = $parentChild{$cur};
 	}
 }

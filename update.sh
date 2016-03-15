@@ -25,7 +25,6 @@ declare -A otherRepos=(
 	[alpine]='https://github.com/gliderlabs/docker-alpine'
 	[arangodb]='https://github.com/arangodb/arangodb-docker'
 	[bonita]='https://github.com/Bonitasoft-Community/docker_bonita'
-	[busybox]='https://github.com/jpetazzo/docker-busybox'
 	[centos]='https://github.com/CentOS/sig-cloud-instance-images'
 	[cirros]='https://github.com/ewindisch/docker-cirros'
 	[clojure]='https://github.com/Quantisan/docker-clojure'
@@ -33,6 +32,7 @@ declare -A otherRepos=(
 	[crux]='https://github.com/therealprologic/docker-crux'
 	[debian]='https://github.com/tianon/docker-brew-debian'
 	[docker-dev]='https://github.com/docker/docker'
+	[elixir]='https://github.com/c0b/docker-elixir'
 	[erlang]='https://github.com/c0b/docker-erlang-otp'
 	[fedora]='https://github.com/lsm5/docker-brew-fedora'
 	[gazebo]='https://github.com/osrf/docker_images'
@@ -54,10 +54,13 @@ declare -A otherRepos=(
 	[neurodebian]='https://github.com/neurodebian/dockerfiles'
 	[nginx]='https://github.com/nginxinc/docker-nginx'
 	[node]='https://github.com/nodejs/docker-node'
+	[nuxeo]='https://github.com/nuxeo/docker-nuxeor'
 	[odoo]='https://github.com/odoo/docker'
 	[opensuse]='https://github.com/openSUSE/docker-containers-build'
 	[oraclelinux]='https://github.com/oracle/docker'
 	[perl]='https://github.com/Perl/docker-perl'
+	[photon]='https://github.com/frapposelli/photon-docker-image'
+	[piwik]='https://github.com/piwik/docker-piwik'
 	[r-base]='https://github.com/rocker-org/rocker'
 	[rakudo]='https://github.com/perl6/docker'
 	[registry]='https://github.com/docker/docker-registry'
@@ -106,11 +109,21 @@ for repo in "${repos[@]}"; do
 		fi
 		
 		logo=
-		if [ -e "$repo/logo.png" ]; then
-			logo="![logo](https://raw.githubusercontent.com/docker-library/docs/master/$repo/logo.png)"
-		elif [ -e "$repo/logo.svg" ]; then
-			# rawgit.com because: http://stackoverflow.com/a/16462143/433558
-			logo="![logo](https://rawgit.com/docker-library/docs/master/$repo/logo.svg)"
+		logoFile=
+		for f in png svg; do
+			if [ -e "$repo/logo.$f" ]; then
+				logoFile="$repo/logo.$f"
+				break
+			fi
+		done
+		if [ "$logoFile" ]; then
+			logoCommit="$(git log -1 --format='format:%H' -- "$logoFile" 2>/dev/null || true)"
+			[ "$logoCommit" ] || logoCommit='master'
+			if [ "${logoFile##*.}" = 'svg' ]; then
+				logo="![logo](https://rawgit.com/docker-library/docs/$logoCommit/$logoFile)"
+			else
+				logo="![logo](https://raw.githubusercontent.com/docker-library/docs/$logoCommit/$logoFile)"
+			fi
 		fi
 		
 		compose=
@@ -120,7 +133,14 @@ for repo in "${repos[@]}"; do
 			composeYml=$'```yaml\n'"$(cat "$repo/docker-compose.yml")"$'\n```'
 		fi
 		
-		cp -v "$helperDir/template.md" "$repo/README.md"
+		deprecated=
+		if [ -f "$repo/deprecated.md" ]; then
+			deprecated=$'# **DEPRECATED**\n\n'
+			deprecated+="$(cat "$repo/deprecated.md")"
+			deprecated+=$'\n\n'
+		fi
+		
+		{ echo -n "$deprecated"; cat "$helperDir/template.md"; } > "$repo/README.md"
 		
 		echo '  TAGS => generate-dockerfile-links-partial.sh'
 		partial="$("$helperDir/generate-dockerfile-links-partial.sh" "$repo")"

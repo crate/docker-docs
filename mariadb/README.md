@@ -1,7 +1,10 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`10.0.22`, `10.0`, `10`, `latest` (*10.0/Dockerfile*)](https://github.com/docker-library/mariadb/blob/034c283be05caa5e465047ce19f1770647eadd74/10.0/Dockerfile)
--	[`5.5.46`, `5.5`, `5` (*5.5/Dockerfile*)](https://github.com/docker-library/mariadb/blob/fe52f7ab9f0a4f827394ba65f5c7f51def1959c1/5.5/Dockerfile)
+-	[`10.1.12`, `10.1`, `10`, `latest` (*10.1/Dockerfile*)](https://github.com/docker-library/mariadb/blob/c64262339972ac2a8dadaf8141e012aa8ddb8c23/10.1/Dockerfile)
+-	[`10.0.24`, `10.0` (*10.0/Dockerfile*)](https://github.com/docker-library/mariadb/blob/027cff3bc7e39065a98ca001175ba7dbdb32be32/10.0/Dockerfile)
+-	[`5.5.48`, `5.5`, `5` (*5.5/Dockerfile*)](https://github.com/docker-library/mariadb/blob/027cff3bc7e39065a98ca001175ba7dbdb32be32/5.5/Dockerfile)
+
+[![](https://badge.imagelayers.io/mariadb:latest.svg)](https://imagelayers.io/?images=mariadb:10.1.12,mariadb:10.0.24,mariadb:5.5.48)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/mariadb`)](https://github.com/docker-library/official-images/blob/master/library/mariadb). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -15,7 +18,7 @@ The intent is also to maintain high compatibility with MySQL, ensuring a "drop-i
 
 > [wikipedia.org/wiki/MariaDB](https://en.wikipedia.org/wiki/MariaDB)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/mariadb/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/74e3b3d4d60389208732dbd2c95145868111d959/mariadb/logo.png)
 
 # How to use this image
 
@@ -81,6 +84,20 @@ Note that users on host systems with SELinux enabled may see issues with this. T
 $ chcon -Rt svirt_sandbox_file_t /my/custom
 ```
 
+### Configuration without a `cnf` file
+
+Many configuration options can be passed as flags to `mysqld`. This will give you the flexibility to customize the container without needing a `cnf` file. For example, if you want to change the default encoding and collation for all tables to use UTF-8 (`utf8mb4`) just run the following:
+
+```console
+$ docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+```
+
+If you would like to see a complete list of available options, just run:
+
+```console
+$ docker run -it --rm mariadb:tag --verbose --help
+```
+
 ## Environment Variables
 
 When you start the `mariadb` image, you can adjust the configuration of the MariaDB instance by passing one or more environment variables on the `docker run` command line. Do note that none of the variables below will have any effect if you start the container with a data directory that already contains a database: any pre-existing database will always be left untouched on container startup.
@@ -143,7 +160,7 @@ If you start your `mariadb` container instance with a data directory that alread
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

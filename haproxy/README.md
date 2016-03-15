@@ -1,8 +1,10 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`1.4.26`, `1.4` (*1.4/Dockerfile*)](https://github.com/docker-library/haproxy/blob/e06675f0670414932e659db5ba8f98f8a430a1d1/1.4/Dockerfile)
--	[`1.5.15`, `1.5` (*1.5/Dockerfile*)](https://github.com/docker-library/haproxy/blob/2c73ea45ca3defee81f16ca206d2c2ca8e79f167/1.5/Dockerfile)
--	[`1.6.2`, `1.6`, `1`, `latest` (*1.6/Dockerfile*)](https://github.com/docker-library/haproxy/blob/dbb1a9e1991643c64785dd359f67daa4201c034f/1.6/Dockerfile)
+-	[`1.4.26`, `1.4` (*1.4/Dockerfile*)](https://github.com/docker-library/haproxy/blob/2c1ab61d9ba298a8b40164ed91d8d0a797e7bb1c/1.4/Dockerfile)
+-	[`1.5.15`, `1.5` (*1.5/Dockerfile*)](https://github.com/docker-library/haproxy/blob/2c1ab61d9ba298a8b40164ed91d8d0a797e7bb1c/1.5/Dockerfile)
+-	[`1.6.3`, `1.6`, `1`, `latest` (*1.6/Dockerfile*)](https://github.com/docker-library/haproxy/blob/7998146d9fb15e16c0550d978064e82619bf7702/1.6/Dockerfile)
+
+[![](https://badge.imagelayers.io/haproxy:latest.svg)](https://imagelayers.io/?images=haproxy:1.4.26,haproxy:1.5.15,haproxy:1.6.3)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/haproxy`)](https://github.com/docker-library/official-images/blob/master/library/haproxy). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -14,7 +16,7 @@ HAProxy is a free, open source high availability solution, providing load balanc
 
 > [wikipedia.org/wiki/HAProxy](https://en.wikipedia.org/wiki/HAProxy)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/haproxy/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/566c944ca5eb9d1947c8a2e8821f8de2b0fc144c/haproxy/logo.png)
 
 # How to use this image
 
@@ -33,10 +35,21 @@ FROM haproxy:1.5
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 ```
 
-Build and run:
+## Build the container
 
 ```console
 $ docker build -t my-haproxy .
+```
+
+## Test the configuration file
+
+```console
+$ docker run -it --rm --name haproxy-syntax-check haproxy:1.5 haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
+```
+
+## Run the container
+
+```console
 $ docker run -d --name my-running-haproxy my-haproxy
 ```
 
@@ -52,7 +65,7 @@ View [license information](http://www.haproxy.org/download/1.5/doc/LICENSE) for 
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

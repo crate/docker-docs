@@ -10,56 +10,53 @@
 ## `memcached:1.4.25`
 
 ```console
-$ docker pull library/memcached@sha256:49f8692f7f407b56ebed834b8c31ee0e28d58bbaf78911c9ea7f779ad4ad8d74
+$ docker pull library/memcached@sha256:7f6c5af9341431ce12c361dab1e6878de35f6acdf8ffd57582e539ea66ca657a
 ```
 
--	Total Virtual Size: 132.2 MB (132248900 bytes)
--	Total v2 Content-Length: 54.3 MB (54250462 bytes)
+-	Total Virtual Size: 132.3 MB (132262631 bytes)
+-	Total v2 Content-Length: 54.3 MB (54267310 bytes)
 
 ### Layers (12)
 
-#### `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
+#### `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
 
 ```dockerfile
-ADD file:5afd8eec1dc1e7666dcacca7842e44147031003b4e85bd7d9e5122d241295da6 in /
+ADD file:b5391cb13172fb513dbfca0b8471ea02bffa913ffdab94ad864d892d129318c6 in /
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:30 GMT
--	Docker Version: 1.8.3
--	Virtual Size: 125.1 MB (125112192 bytes)
--	v2 Blob: `sha256:3b8d91fe75724cafe136236e31d5212cb322d68aa3bfc4bfda97a0a53a55e234`
--	v2 Content-Length: 51.4 MB (51352982 bytes)
--	v2 Last-Modified: Fri, 20 Nov 2015 00:24:30 GMT
+-	Created: Tue, 01 Mar 2016 18:51:11 GMT
+-	Docker Version: 1.9.1
+-	Virtual Size: 125.1 MB (125110803 bytes)
+-	v2 Blob: `sha256:fdd5d7827f33ef075f45262a0f74ac96ec8a5e687faeb40135319764963dcb42`
+-	v2 Content-Length: 51.4 MB (51367715 bytes)
 
-#### `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
+#### `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
 
 ```dockerfile
 CMD ["/bin/bash"]
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:33 GMT
--	Parent Layer: `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
--	Docker Version: 1.8.3
+-	Created: Tue, 01 Mar 2016 18:51:14 GMT
+-	Parent Layer: `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
+#### `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
 
 ```dockerfile
 RUN groupadd -r memcache && useradd -r -g memcache memcache
 ```
 
--	Created: Fri, 20 Nov 2015 07:00:52 GMT
--	Parent Layer: `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:15 GMT
+-	Parent Layer: `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
+-	Docker Version: 1.9.1
 -	Virtual Size: 330.4 KB (330389 bytes)
--	v2 Blob: `sha256:54924c4d2782d6e41d32f2773aba89f0464bf38b0adb2395538f7cfc67f7ce50`
--	v2 Content-Length: 2.0 KB (2047 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:46 GMT
+-	v2 Blob: `sha256:33b2d0d8b9b3c604df510c351eb45bb31c8c47853a6e7d6d911616b16d3519d5`
+-	v2 Content-Length: 2.0 KB (2038 bytes)
 
-#### `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
+#### `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
 
 ```dockerfile
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -67,43 +64,40 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 ```
 
--	Created: Fri, 20 Nov 2015 07:01:33 GMT
--	Parent Layer: `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
--	Docker Version: 1.8.3
--	Virtual Size: 608.2 KB (608175 bytes)
--	v2 Blob: `sha256:c73fbadea8d8433b3f615d58172a2083232ac32b72b5d6779b64aa1ec88d52f1`
--	v2 Content-Length: 237.6 KB (237649 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:41 GMT
+-	Created: Wed, 02 Mar 2016 10:22:47 GMT
+-	Parent Layer: `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
+-	Docker Version: 1.9.1
+-	Virtual Size: 613.5 KB (613535 bytes)
+-	v2 Blob: `sha256:9d465342436b127e95b517c6ce805f18e69c2dda4553c49bc5a1785d570a7058`
+-	v2 Content-Length: 237.8 KB (237837 bytes)
 
-#### `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
+#### `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
 
 ```dockerfile
 ENV MEMCACHED_VERSION=1.4.25
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:47 GMT
--	Parent Layer: `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
+#### `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
 
 ```dockerfile
 ENV MEMCACHED_SHA1=7fd0ba9283c61204f196638ecf2e9295688b2314
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:48 GMT
--	Parent Layer: `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
+#### `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
 
 ```dockerfile
 RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
@@ -111,7 +105,7 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& curl -SL "http://memcached.org/files/memcached-$MEMCACHED_VERSION.tar.gz" -o memcached.tar.gz \
-	&& echo "$MEMCACHED_SHA1 memcached.tar.gz" | sha1sum -c - \
+	&& echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c - \
 	&& mkdir -p /usr/src/memcached \
 	&& tar -xzf memcached.tar.gz -C /usr/src/memcached --strip-components=1 \
 	&& rm memcached.tar.gz \
@@ -123,137 +117,128 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get purge -y --auto-remove $buildDeps
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:14 GMT
--	Parent Layer: `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
--	Docker Version: 1.8.3
--	Virtual Size: 6.2 MB (6197988 bytes)
--	v2 Blob: `sha256:c2e0feac2717a5a85ac0e8967fa64e2c35450165684ec4a23b43b463765e19f6`
--	v2 Content-Length: 2.7 MB (2657331 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:28 GMT
+-	Created: Wed, 02 Mar 2016 10:24:01 GMT
+-	Parent Layer: `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
+-	Docker Version: 1.9.1
+-	Virtual Size: 6.2 MB (6207748 bytes)
+-	v2 Blob: `sha256:a641847c7342ed39d296d3c06b26d1e7b68e3acc9c99e39b6d2ed90b349cfb88`
+-	v2 Content-Length: 2.7 MB (2659267 bytes)
 
-#### `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
+#### `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
 
 ```dockerfile
 COPY file:7d149642e02cc8ce55f02238e882e5a995c2294115ae2b5a04623d9bd4d72a22 in /entrypoint.sh
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:02 GMT
+-	Parent Layer: `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
+-	Docker Version: 1.9.1
 -	Virtual Size: 156.0 B
 -	v2 Blob: `sha256:31342a34ef9f0f2a5c8e5bf72b59e3501caa484a7393e9dc2060d11144f54146`
 -	v2 Content-Length: 229.0 B
--	v2 Last-Modified: Mon, 24 Aug 2015 23:46:46 GMT
 
-#### `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
+#### `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
 
 ```dockerfile
 ENTRYPOINT &{["/entrypoint.sh"]}
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
+#### `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
 
 ```dockerfile
 USER [memcache]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:17 GMT
--	Parent Layer: `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
+#### `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
 
 ```dockerfile
 EXPOSE 11211/tcp
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `408eb7ca9c907814b6725268b9e2160cdaa62b4ccf2f3376455cc45b234aaa39`
+#### `c9df794a0454d7a5aa93f81b85765083da7f047ab68e180c18c40d9ef1f53184`
 
 ```dockerfile
 CMD ["memcached"]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
 ## `memcached:1.4`
 
 ```console
-$ docker pull library/memcached@sha256:8fb7944f64b157d46e6fe86781c79813737f429ff7e4a6e3e6e6883485ef0cd7
+$ docker pull library/memcached@sha256:765e558e63c3a9ccc6affa7e077adcc0b16502fe620b47a87908c68aa2073e54
 ```
 
--	Total Virtual Size: 132.2 MB (132248900 bytes)
--	Total v2 Content-Length: 54.3 MB (54250462 bytes)
+-	Total Virtual Size: 132.3 MB (132262631 bytes)
+-	Total v2 Content-Length: 54.3 MB (54267310 bytes)
 
 ### Layers (12)
 
-#### `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
+#### `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
 
 ```dockerfile
-ADD file:5afd8eec1dc1e7666dcacca7842e44147031003b4e85bd7d9e5122d241295da6 in /
+ADD file:b5391cb13172fb513dbfca0b8471ea02bffa913ffdab94ad864d892d129318c6 in /
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:30 GMT
--	Docker Version: 1.8.3
--	Virtual Size: 125.1 MB (125112192 bytes)
--	v2 Blob: `sha256:3b8d91fe75724cafe136236e31d5212cb322d68aa3bfc4bfda97a0a53a55e234`
--	v2 Content-Length: 51.4 MB (51352982 bytes)
--	v2 Last-Modified: Fri, 20 Nov 2015 00:24:30 GMT
+-	Created: Tue, 01 Mar 2016 18:51:11 GMT
+-	Docker Version: 1.9.1
+-	Virtual Size: 125.1 MB (125110803 bytes)
+-	v2 Blob: `sha256:fdd5d7827f33ef075f45262a0f74ac96ec8a5e687faeb40135319764963dcb42`
+-	v2 Content-Length: 51.4 MB (51367715 bytes)
 
-#### `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
+#### `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
 
 ```dockerfile
 CMD ["/bin/bash"]
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:33 GMT
--	Parent Layer: `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
--	Docker Version: 1.8.3
+-	Created: Tue, 01 Mar 2016 18:51:14 GMT
+-	Parent Layer: `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
+#### `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
 
 ```dockerfile
 RUN groupadd -r memcache && useradd -r -g memcache memcache
 ```
 
--	Created: Fri, 20 Nov 2015 07:00:52 GMT
--	Parent Layer: `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:15 GMT
+-	Parent Layer: `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
+-	Docker Version: 1.9.1
 -	Virtual Size: 330.4 KB (330389 bytes)
--	v2 Blob: `sha256:54924c4d2782d6e41d32f2773aba89f0464bf38b0adb2395538f7cfc67f7ce50`
--	v2 Content-Length: 2.0 KB (2047 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:46 GMT
+-	v2 Blob: `sha256:33b2d0d8b9b3c604df510c351eb45bb31c8c47853a6e7d6d911616b16d3519d5`
+-	v2 Content-Length: 2.0 KB (2038 bytes)
 
-#### `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
+#### `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
 
 ```dockerfile
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -261,43 +246,40 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 ```
 
--	Created: Fri, 20 Nov 2015 07:01:33 GMT
--	Parent Layer: `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
--	Docker Version: 1.8.3
--	Virtual Size: 608.2 KB (608175 bytes)
--	v2 Blob: `sha256:c73fbadea8d8433b3f615d58172a2083232ac32b72b5d6779b64aa1ec88d52f1`
--	v2 Content-Length: 237.6 KB (237649 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:41 GMT
+-	Created: Wed, 02 Mar 2016 10:22:47 GMT
+-	Parent Layer: `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
+-	Docker Version: 1.9.1
+-	Virtual Size: 613.5 KB (613535 bytes)
+-	v2 Blob: `sha256:9d465342436b127e95b517c6ce805f18e69c2dda4553c49bc5a1785d570a7058`
+-	v2 Content-Length: 237.8 KB (237837 bytes)
 
-#### `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
+#### `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
 
 ```dockerfile
 ENV MEMCACHED_VERSION=1.4.25
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:47 GMT
--	Parent Layer: `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
+#### `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
 
 ```dockerfile
 ENV MEMCACHED_SHA1=7fd0ba9283c61204f196638ecf2e9295688b2314
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:48 GMT
--	Parent Layer: `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
+#### `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
 
 ```dockerfile
 RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
@@ -305,7 +287,7 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& curl -SL "http://memcached.org/files/memcached-$MEMCACHED_VERSION.tar.gz" -o memcached.tar.gz \
-	&& echo "$MEMCACHED_SHA1 memcached.tar.gz" | sha1sum -c - \
+	&& echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c - \
 	&& mkdir -p /usr/src/memcached \
 	&& tar -xzf memcached.tar.gz -C /usr/src/memcached --strip-components=1 \
 	&& rm memcached.tar.gz \
@@ -317,137 +299,128 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get purge -y --auto-remove $buildDeps
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:14 GMT
--	Parent Layer: `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
--	Docker Version: 1.8.3
--	Virtual Size: 6.2 MB (6197988 bytes)
--	v2 Blob: `sha256:c2e0feac2717a5a85ac0e8967fa64e2c35450165684ec4a23b43b463765e19f6`
--	v2 Content-Length: 2.7 MB (2657331 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:28 GMT
+-	Created: Wed, 02 Mar 2016 10:24:01 GMT
+-	Parent Layer: `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
+-	Docker Version: 1.9.1
+-	Virtual Size: 6.2 MB (6207748 bytes)
+-	v2 Blob: `sha256:a641847c7342ed39d296d3c06b26d1e7b68e3acc9c99e39b6d2ed90b349cfb88`
+-	v2 Content-Length: 2.7 MB (2659267 bytes)
 
-#### `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
+#### `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
 
 ```dockerfile
 COPY file:7d149642e02cc8ce55f02238e882e5a995c2294115ae2b5a04623d9bd4d72a22 in /entrypoint.sh
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:02 GMT
+-	Parent Layer: `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
+-	Docker Version: 1.9.1
 -	Virtual Size: 156.0 B
 -	v2 Blob: `sha256:31342a34ef9f0f2a5c8e5bf72b59e3501caa484a7393e9dc2060d11144f54146`
 -	v2 Content-Length: 229.0 B
--	v2 Last-Modified: Mon, 24 Aug 2015 23:46:46 GMT
 
-#### `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
+#### `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
 
 ```dockerfile
 ENTRYPOINT &{["/entrypoint.sh"]}
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
+#### `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
 
 ```dockerfile
 USER [memcache]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:17 GMT
--	Parent Layer: `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
+#### `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
 
 ```dockerfile
 EXPOSE 11211/tcp
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `408eb7ca9c907814b6725268b9e2160cdaa62b4ccf2f3376455cc45b234aaa39`
+#### `c9df794a0454d7a5aa93f81b85765083da7f047ab68e180c18c40d9ef1f53184`
 
 ```dockerfile
 CMD ["memcached"]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
 ## `memcached:1`
 
 ```console
-$ docker pull library/memcached@sha256:7c137d800cfbb379bd84feb500a54cc2b6fa5489db91bf4f2677790ac3708820
+$ docker pull library/memcached@sha256:1442a53d5ded5fd1e506229498b4d444d8d600224237279fb43fe8553a0570b6
 ```
 
--	Total Virtual Size: 132.2 MB (132248900 bytes)
--	Total v2 Content-Length: 54.3 MB (54250462 bytes)
+-	Total Virtual Size: 132.3 MB (132262631 bytes)
+-	Total v2 Content-Length: 54.3 MB (54267310 bytes)
 
 ### Layers (12)
 
-#### `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
+#### `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
 
 ```dockerfile
-ADD file:5afd8eec1dc1e7666dcacca7842e44147031003b4e85bd7d9e5122d241295da6 in /
+ADD file:b5391cb13172fb513dbfca0b8471ea02bffa913ffdab94ad864d892d129318c6 in /
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:30 GMT
--	Docker Version: 1.8.3
--	Virtual Size: 125.1 MB (125112192 bytes)
--	v2 Blob: `sha256:3b8d91fe75724cafe136236e31d5212cb322d68aa3bfc4bfda97a0a53a55e234`
--	v2 Content-Length: 51.4 MB (51352982 bytes)
--	v2 Last-Modified: Fri, 20 Nov 2015 00:24:30 GMT
+-	Created: Tue, 01 Mar 2016 18:51:11 GMT
+-	Docker Version: 1.9.1
+-	Virtual Size: 125.1 MB (125110803 bytes)
+-	v2 Blob: `sha256:fdd5d7827f33ef075f45262a0f74ac96ec8a5e687faeb40135319764963dcb42`
+-	v2 Content-Length: 51.4 MB (51367715 bytes)
 
-#### `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
+#### `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
 
 ```dockerfile
 CMD ["/bin/bash"]
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:33 GMT
--	Parent Layer: `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
--	Docker Version: 1.8.3
+-	Created: Tue, 01 Mar 2016 18:51:14 GMT
+-	Parent Layer: `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
+#### `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
 
 ```dockerfile
 RUN groupadd -r memcache && useradd -r -g memcache memcache
 ```
 
--	Created: Fri, 20 Nov 2015 07:00:52 GMT
--	Parent Layer: `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:15 GMT
+-	Parent Layer: `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
+-	Docker Version: 1.9.1
 -	Virtual Size: 330.4 KB (330389 bytes)
--	v2 Blob: `sha256:54924c4d2782d6e41d32f2773aba89f0464bf38b0adb2395538f7cfc67f7ce50`
--	v2 Content-Length: 2.0 KB (2047 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:46 GMT
+-	v2 Blob: `sha256:33b2d0d8b9b3c604df510c351eb45bb31c8c47853a6e7d6d911616b16d3519d5`
+-	v2 Content-Length: 2.0 KB (2038 bytes)
 
-#### `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
+#### `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
 
 ```dockerfile
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -455,43 +428,40 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 ```
 
--	Created: Fri, 20 Nov 2015 07:01:33 GMT
--	Parent Layer: `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
--	Docker Version: 1.8.3
--	Virtual Size: 608.2 KB (608175 bytes)
--	v2 Blob: `sha256:c73fbadea8d8433b3f615d58172a2083232ac32b72b5d6779b64aa1ec88d52f1`
--	v2 Content-Length: 237.6 KB (237649 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:41 GMT
+-	Created: Wed, 02 Mar 2016 10:22:47 GMT
+-	Parent Layer: `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
+-	Docker Version: 1.9.1
+-	Virtual Size: 613.5 KB (613535 bytes)
+-	v2 Blob: `sha256:9d465342436b127e95b517c6ce805f18e69c2dda4553c49bc5a1785d570a7058`
+-	v2 Content-Length: 237.8 KB (237837 bytes)
 
-#### `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
+#### `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
 
 ```dockerfile
 ENV MEMCACHED_VERSION=1.4.25
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:47 GMT
--	Parent Layer: `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
+#### `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
 
 ```dockerfile
 ENV MEMCACHED_SHA1=7fd0ba9283c61204f196638ecf2e9295688b2314
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:48 GMT
--	Parent Layer: `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
+#### `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
 
 ```dockerfile
 RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
@@ -499,7 +469,7 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& curl -SL "http://memcached.org/files/memcached-$MEMCACHED_VERSION.tar.gz" -o memcached.tar.gz \
-	&& echo "$MEMCACHED_SHA1 memcached.tar.gz" | sha1sum -c - \
+	&& echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c - \
 	&& mkdir -p /usr/src/memcached \
 	&& tar -xzf memcached.tar.gz -C /usr/src/memcached --strip-components=1 \
 	&& rm memcached.tar.gz \
@@ -511,137 +481,128 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get purge -y --auto-remove $buildDeps
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:14 GMT
--	Parent Layer: `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
--	Docker Version: 1.8.3
--	Virtual Size: 6.2 MB (6197988 bytes)
--	v2 Blob: `sha256:c2e0feac2717a5a85ac0e8967fa64e2c35450165684ec4a23b43b463765e19f6`
--	v2 Content-Length: 2.7 MB (2657331 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:28 GMT
+-	Created: Wed, 02 Mar 2016 10:24:01 GMT
+-	Parent Layer: `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
+-	Docker Version: 1.9.1
+-	Virtual Size: 6.2 MB (6207748 bytes)
+-	v2 Blob: `sha256:a641847c7342ed39d296d3c06b26d1e7b68e3acc9c99e39b6d2ed90b349cfb88`
+-	v2 Content-Length: 2.7 MB (2659267 bytes)
 
-#### `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
+#### `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
 
 ```dockerfile
 COPY file:7d149642e02cc8ce55f02238e882e5a995c2294115ae2b5a04623d9bd4d72a22 in /entrypoint.sh
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:02 GMT
+-	Parent Layer: `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
+-	Docker Version: 1.9.1
 -	Virtual Size: 156.0 B
 -	v2 Blob: `sha256:31342a34ef9f0f2a5c8e5bf72b59e3501caa484a7393e9dc2060d11144f54146`
 -	v2 Content-Length: 229.0 B
--	v2 Last-Modified: Mon, 24 Aug 2015 23:46:46 GMT
 
-#### `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
+#### `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
 
 ```dockerfile
 ENTRYPOINT &{["/entrypoint.sh"]}
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
+#### `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
 
 ```dockerfile
 USER [memcache]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:17 GMT
--	Parent Layer: `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
+#### `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
 
 ```dockerfile
 EXPOSE 11211/tcp
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `408eb7ca9c907814b6725268b9e2160cdaa62b4ccf2f3376455cc45b234aaa39`
+#### `c9df794a0454d7a5aa93f81b85765083da7f047ab68e180c18c40d9ef1f53184`
 
 ```dockerfile
 CMD ["memcached"]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
 ## `memcached:latest`
 
 ```console
-$ docker pull library/memcached@sha256:07148dbba7796535f04a56bd44383812569b5cb87696de6a2b0ebc6dd7dd83e8
+$ docker pull library/memcached@sha256:cee19e826c2aba64e4836c211d25403014240c1c67f436ff2c638121dcd22a35
 ```
 
--	Total Virtual Size: 132.2 MB (132248900 bytes)
--	Total v2 Content-Length: 54.3 MB (54250462 bytes)
+-	Total Virtual Size: 132.3 MB (132262631 bytes)
+-	Total v2 Content-Length: 54.3 MB (54267310 bytes)
 
 ### Layers (12)
 
-#### `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
+#### `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
 
 ```dockerfile
-ADD file:5afd8eec1dc1e7666dcacca7842e44147031003b4e85bd7d9e5122d241295da6 in /
+ADD file:b5391cb13172fb513dbfca0b8471ea02bffa913ffdab94ad864d892d129318c6 in /
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:30 GMT
--	Docker Version: 1.8.3
--	Virtual Size: 125.1 MB (125112192 bytes)
--	v2 Blob: `sha256:3b8d91fe75724cafe136236e31d5212cb322d68aa3bfc4bfda97a0a53a55e234`
--	v2 Content-Length: 51.4 MB (51352982 bytes)
--	v2 Last-Modified: Fri, 20 Nov 2015 00:24:30 GMT
+-	Created: Tue, 01 Mar 2016 18:51:11 GMT
+-	Docker Version: 1.9.1
+-	Virtual Size: 125.1 MB (125110803 bytes)
+-	v2 Blob: `sha256:fdd5d7827f33ef075f45262a0f74ac96ec8a5e687faeb40135319764963dcb42`
+-	v2 Content-Length: 51.4 MB (51367715 bytes)
 
-#### `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
+#### `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
 
 ```dockerfile
 CMD ["/bin/bash"]
 ```
 
--	Created: Fri, 20 Nov 2015 00:21:33 GMT
--	Parent Layer: `5679b9b90e0939cfc7943db37daceb22006f76d9a774fdf46b898827d0eeff37`
--	Docker Version: 1.8.3
+-	Created: Tue, 01 Mar 2016 18:51:14 GMT
+-	Parent Layer: `d8bd0657b25f17eef81a3d52b53da5bda4de0cf5cca3dcafec277634ae4b38fb`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
+#### `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
 
 ```dockerfile
 RUN groupadd -r memcache && useradd -r -g memcache memcache
 ```
 
--	Created: Fri, 20 Nov 2015 07:00:52 GMT
--	Parent Layer: `ea6bab360f5604439718bbcbc77b7dabc43b137a97e4fc193a8ca4f9ef25b6ad`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:15 GMT
+-	Parent Layer: `a582cd499e0ff0b0a2af94dbaef5f56fce1935b7c01429074c2d5abd1ea23d5a`
+-	Docker Version: 1.9.1
 -	Virtual Size: 330.4 KB (330389 bytes)
--	v2 Blob: `sha256:54924c4d2782d6e41d32f2773aba89f0464bf38b0adb2395538f7cfc67f7ce50`
--	v2 Content-Length: 2.0 KB (2047 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:46 GMT
+-	v2 Blob: `sha256:33b2d0d8b9b3c604df510c351eb45bb31c8c47853a6e7d6d911616b16d3519d5`
+-	v2 Content-Length: 2.0 KB (2038 bytes)
 
-#### `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
+#### `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
 
 ```dockerfile
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -649,43 +610,40 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 ```
 
--	Created: Fri, 20 Nov 2015 07:01:33 GMT
--	Parent Layer: `4ccfee6638a4facc34b501b82725ed442c4754d5c390c1623e070294b03ccf2c`
--	Docker Version: 1.8.3
--	Virtual Size: 608.2 KB (608175 bytes)
--	v2 Blob: `sha256:c73fbadea8d8433b3f615d58172a2083232ac32b72b5d6779b64aa1ec88d52f1`
--	v2 Content-Length: 237.6 KB (237649 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:41 GMT
+-	Created: Wed, 02 Mar 2016 10:22:47 GMT
+-	Parent Layer: `b2170f1e785a7432b9e4e0257513b10ce8b2cb775241b4f86592e6bf61e4d94c`
+-	Docker Version: 1.9.1
+-	Virtual Size: 613.5 KB (613535 bytes)
+-	v2 Blob: `sha256:9d465342436b127e95b517c6ce805f18e69c2dda4553c49bc5a1785d570a7058`
+-	v2 Content-Length: 237.8 KB (237837 bytes)
 
-#### `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
+#### `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
 
 ```dockerfile
 ENV MEMCACHED_VERSION=1.4.25
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:47 GMT
--	Parent Layer: `b3a7ed0a419a5fbb4e1412e088fef9ac17eacf1416155ce9d3659d84486127c3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `3678371bee8d4f4d33def313159e3ca31156df2f63c197acf1e1b7d954b48ab3`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
+#### `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
 
 ```dockerfile
 ENV MEMCACHED_SHA1=7fd0ba9283c61204f196638ecf2e9295688b2314
 ```
 
--	Created: Fri, 20 Nov 2015 23:03:48 GMT
--	Parent Layer: `0b8914e92ec13eb49cae9d05855ce149acff8ee3ff13d474ad987e6a2f340688`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:22:48 GMT
+-	Parent Layer: `eee3920e6e9fa3984463e1be4a7419388aa5cdf3744a77d964415689aae87c42`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
+#### `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
 
 ```dockerfile
 RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
@@ -693,7 +651,7 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& curl -SL "http://memcached.org/files/memcached-$MEMCACHED_VERSION.tar.gz" -o memcached.tar.gz \
-	&& echo "$MEMCACHED_SHA1 memcached.tar.gz" | sha1sum -c - \
+	&& echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c - \
 	&& mkdir -p /usr/src/memcached \
 	&& tar -xzf memcached.tar.gz -C /usr/src/memcached --strip-components=1 \
 	&& rm memcached.tar.gz \
@@ -705,80 +663,74 @@ RUN buildDeps='curl gcc libc6-dev libevent-dev make perl' \
 	&& apt-get purge -y --auto-remove $buildDeps
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:14 GMT
--	Parent Layer: `143af2b317d8ce4386312c3a312efc67a7f5144a287f01a082251e5e9a1cf5fd`
--	Docker Version: 1.8.3
--	Virtual Size: 6.2 MB (6197988 bytes)
--	v2 Blob: `sha256:c2e0feac2717a5a85ac0e8967fa64e2c35450165684ec4a23b43b463765e19f6`
--	v2 Content-Length: 2.7 MB (2657331 bytes)
--	v2 Last-Modified: Sat, 21 Nov 2015 00:28:28 GMT
+-	Created: Wed, 02 Mar 2016 10:24:01 GMT
+-	Parent Layer: `ea39f3d8f5ae8f67d42b3b6f8b042d3de0c380a9864db2bf2e9a7ce68faf4964`
+-	Docker Version: 1.9.1
+-	Virtual Size: 6.2 MB (6207748 bytes)
+-	v2 Blob: `sha256:a641847c7342ed39d296d3c06b26d1e7b68e3acc9c99e39b6d2ed90b349cfb88`
+-	v2 Content-Length: 2.7 MB (2659267 bytes)
 
-#### `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
+#### `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
 
 ```dockerfile
 COPY file:7d149642e02cc8ce55f02238e882e5a995c2294115ae2b5a04623d9bd4d72a22 in /entrypoint.sh
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `4ffcd7b995e14d62b3376bf1e3e148c878a324d55b910f852ccaeb6ff6bd15a5`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:02 GMT
+-	Parent Layer: `bbfaff8424571fb4347d32606532c06de6c3f66804a22162b66109dc7eecc559`
+-	Docker Version: 1.9.1
 -	Virtual Size: 156.0 B
 -	v2 Blob: `sha256:31342a34ef9f0f2a5c8e5bf72b59e3501caa484a7393e9dc2060d11144f54146`
 -	v2 Content-Length: 229.0 B
--	v2 Last-Modified: Mon, 24 Aug 2015 23:46:46 GMT
 
-#### `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
+#### `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
 
 ```dockerfile
 ENTRYPOINT &{["/entrypoint.sh"]}
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:16 GMT
--	Parent Layer: `42a3418294c41e6e8a3f2fc8d57b1ef20a6644c89b05edf0c27d9844fe9632b3`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `04e8f68e1302df43d99f604b331800ab527872ea9bc774895aa0ce25b5d92385`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
+#### `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
 
 ```dockerfile
 USER [memcache]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:17 GMT
--	Parent Layer: `8b03712d361cb2cfd05a3396cfce6cfe0c970453b5fc3893023ec5236dc05ba6`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:03 GMT
+-	Parent Layer: `d7ee1818f0b263535bf0e66eaef158a1aeb74c782d30efa81c4a77c86e016c85`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
+#### `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
 
 ```dockerfile
 EXPOSE 11211/tcp
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `4c3c8798adf86009692ef47006d56918a14d73a8a5ed61d457109d953712c565`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `43858a69bf0dd54c092611b07395b8fe9fb702cafb171c95f5c32a6fa33e6e33`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT
 
-#### `408eb7ca9c907814b6725268b9e2160cdaa62b4ccf2f3376455cc45b234aaa39`
+#### `c9df794a0454d7a5aa93f81b85765083da7f047ab68e180c18c40d9ef1f53184`
 
 ```dockerfile
 CMD ["memcached"]
 ```
 
--	Created: Fri, 20 Nov 2015 23:05:18 GMT
--	Parent Layer: `97d6d64dfc0e0ccc9c584aa0eb0ffe0470ccc8e5d0c750a660b14b92e51364c4`
--	Docker Version: 1.8.3
+-	Created: Wed, 02 Mar 2016 10:24:04 GMT
+-	Parent Layer: `0be8dc26b62f4bce1d14649e2dbad678e3ba8431c9e50aff858271c619473fca`
+-	Docker Version: 1.9.1
 -	Virtual Size: 0.0 B
 -	v2 Blob: `sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`
 -	v2 Content-Length: 32.0 B
--	v2 Last-Modified: Sat, 14 Nov 2015 09:09:44 GMT

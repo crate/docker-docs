@@ -1,6 +1,11 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `1`, `1.9`, `1.9.7` (*Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/08eeb0e3f0a5ee40cbc2bc01f0004c2aa5b78c15/Dockerfile)
+-	[`latest`, `1`, `1.9`, `1.9.12` (*mainline/jessie/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/f48d943038eaafd1f69cb14d86db95b3044bd4d8/mainline/jessie/Dockerfile)
+-	[`stable`, `1.8`, `1.8.1` (*stable/jessie/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14c1b938737cf4399a6bb039bc506957dce562ae/stable/jessie/Dockerfile)
+-	[`stable-alpine` (*stable/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14c1b938737cf4399a6bb039bc506957dce562ae/stable/alpine/Dockerfile)
+-	[`mainline-alpine`, `alpine` (*mainline/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14c1b938737cf4399a6bb039bc506957dce562ae/mainline/alpine/Dockerfile)
+
+[![](https://badge.imagelayers.io/nginx:latest.svg)](https://imagelayers.io/?images=nginx:latest,nginx:stable,nginx:stable-alpine,nginx:mainline-alpine)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/nginx`)](https://github.com/docker-library/official-images/blob/master/library/nginx). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -12,7 +17,7 @@ Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, H
 
 > [wikipedia.org/wiki/Nginx](https://en.wikipedia.org/wiki/Nginx)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/nginx/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/nginx/logo.png)
 
 # How to use this image
 
@@ -72,9 +77,48 @@ Then, build with `docker build -t some-custom-nginx .` and run:
 $ docker run --name some-nginx -d some-custom-nginx
 ```
 
+### using environment variables in nginx configuration
+
+Out-of-the-box, Nginx doesn't support using environment variables inside most configuration blocks. But `envsubst` may be used as a workaround if you need to generate your nginx configuration dynamically before nginx starts.
+
+Here is an example using docker-compose.yml:
+
+```web:
+  image: nginx
+  volumes:
+   - ./mysite.template:/etc/nginx/conf.d/mysite.template
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_HOST=foobar.com
+   - NGINX_PORT=80
+  command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+```
+
+The `mysite.template` file may then contain variable references like this :
+
+`listen       ${NGINX_PORT};
+`
+
+# Image Variants
+
+The `nginx` images come in many flavors, each designed for a specific use case.
+
+## `nginx:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+## `nginx:alpine`
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

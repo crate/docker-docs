@@ -1,9 +1,11 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`12.04.5`, `12.04`, `precise-20151028`, `precise` (*precise/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3c355946fd5164da3f31063a5c5f249c826f7071/precise/Dockerfile)
--	[`14.04.3`, `14.04`, `trusty-20151028`, `trusty`, `latest` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3c355946fd5164da3f31063a5c5f249c826f7071/trusty/Dockerfile)
--	[`15.04`, `vivid-20151111`, `vivid` (*vivid/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3c355946fd5164da3f31063a5c5f249c826f7071/vivid/Dockerfile)
--	[`15.10`, `wily-20151019`, `wily` (*wily/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3c355946fd5164da3f31063a5c5f249c826f7071/wily/Dockerfile)
+-	[`12.04.5`, `12.04`, `precise-20160303`, `precise` (*precise/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17/precise/Dockerfile)
+-	[`14.04.4`, `14.04`, `trusty-20160302`, `trusty`, `latest` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17/trusty/Dockerfile)
+-	[`15.10`, `wily-20160302`, `wily` (*wily/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17/wily/Dockerfile)
+-	[`16.04`, `xenial-20160303.1`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17/xenial/Dockerfile)
+
+[![](https://badge.imagelayers.io/ubuntu:latest.svg)](https://imagelayers.io/?images=ubuntu:12.04.5,ubuntu:14.04.4,ubuntu:15.10,ubuntu:16.04)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/ubuntu`)](https://github.com/docker-library/official-images/blob/master/library/ubuntu). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -17,7 +19,7 @@ Development of Ubuntu is led by UK-based Canonical Ltd., a company owned by Sout
 
 > [wikipedia.org/wiki/Ubuntu_(operating_system)](https://en.wikipedia.org/wiki/Ubuntu_%28operating_system%29)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/ubuntu/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/ubuntu/logo.png)
 
 # What's in this image?
 
@@ -71,7 +73,7 @@ deb-src http://archive.ubuntu.com/ubuntu/ precise-security universe
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

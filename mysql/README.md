@@ -1,8 +1,10 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`5.5.46`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/mysql/blob/6871ce6cdd55ecf09f81cf8f00dfac30b8c3ab1f/5.5/Dockerfile)
--	[`5.6.27`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/mysql/blob/6871ce6cdd55ecf09f81cf8f00dfac30b8c3ab1f/5.6/Dockerfile)
--	[`5.7.9`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/mysql/blob/141b713b8c973a7a2592b5f6bf9c44693fedea36/5.7/Dockerfile)
+-	[`5.5.48`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/mysql/blob/a93628500589d5a584f523fd168360ec16d81655/5.5/Dockerfile)
+-	[`5.6.29`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/mysql/blob/3288a66368f16deb6f2768ce373ab36f92553cfa/5.6/Dockerfile)
+-	[`5.7.11`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/mysql/blob/3288a66368f16deb6f2768ce373ab36f92553cfa/5.7/Dockerfile)
+
+[![](https://badge.imagelayers.io/mysql:latest.svg)](https://imagelayers.io/?images=mysql:5.5.48,mysql:5.6.29,mysql:5.7.11)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/mysql`)](https://github.com/docker-library/official-images/blob/master/library/mysql). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -14,7 +16,7 @@ MySQL is the world's most popular open source database. With its proven performa
 
 For more information and related downloads for MySQL Server and other MySQL products, please visit [www.mysql.com](http://www.mysql.com).
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/c408469abbac35ad1e4a50a6618836420eb9502e/mysql/logo.png)
 
 # How to use this image
 
@@ -80,6 +82,20 @@ Note that users on host systems with SELinux enabled may see issues with this. T
 $ chcon -Rt svirt_sandbox_file_t /my/custom
 ```
 
+### Configuration without a `cnf` file
+
+Many configuration options can be passed as flags to `mysqld`. This will give you the flexibility to customize the container without needing a `cnf` file. For example, if you want to change the default encoding and collation for all tables to use UTF-8 (`utf8mb4`) just run the following:
+
+```console
+$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+```
+
+If you would like to see a complete list of available options, just run:
+
+```console
+$ docker run -it --rm mysql:tag --verbose --help
+```
+
 ## Environment Variables
 
 When you start the `mysql` image, you can adjust the configuration of the MySQL instance by passing one or more environment variables on the `docker run` command line. Do note that none of the variables below will have any effect if you start the container with a data directory that already contains a database: any pre-existing database will always be left untouched on container startup.
@@ -142,7 +158,7 @@ If you start your `mysql` container instance with a data directory that already 
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

@@ -1,11 +1,12 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`9.0.22`, `9.0` (*9.0/Dockerfile*)](https://github.com/docker-library/postgres/blob/8f8c0bbc5236e0deedd35595c504e5fd380b1233/9.0/Dockerfile)
--	[`9.1.19`, `9.1` (*9.1/Dockerfile*)](https://github.com/docker-library/postgres/blob/ed23320582f4ec5b0e5e35c99d98966dacbc6ed8/9.1/Dockerfile)
--	[`9.2.14`, `9.2` (*9.2/Dockerfile*)](https://github.com/docker-library/postgres/blob/ed23320582f4ec5b0e5e35c99d98966dacbc6ed8/9.2/Dockerfile)
--	[`9.3.10`, `9.3` (*9.3/Dockerfile*)](https://github.com/docker-library/postgres/blob/ed23320582f4ec5b0e5e35c99d98966dacbc6ed8/9.3/Dockerfile)
--	[`9.4.5`, `9.4`, `9`, `latest` (*9.4/Dockerfile*)](https://github.com/docker-library/postgres/blob/ed23320582f4ec5b0e5e35c99d98966dacbc6ed8/9.4/Dockerfile)
--	[`9.5-beta2`, `9.5` (*9.5/Dockerfile*)](https://github.com/docker-library/postgres/blob/8a9fbcb40f13ccc7762f278b9df611cabe22d300/9.5/Dockerfile)
+-	[`9.1.20`, `9.1` (*9.1/Dockerfile*)](https://github.com/docker-library/postgres/blob/48d6cd0f57ea3f7de4a3d02d7b0ca8f2f9d6e991/9.1/Dockerfile)
+-	[`9.2.15`, `9.2` (*9.2/Dockerfile*)](https://github.com/docker-library/postgres/blob/48d6cd0f57ea3f7de4a3d02d7b0ca8f2f9d6e991/9.2/Dockerfile)
+-	[`9.3.11`, `9.3` (*9.3/Dockerfile*)](https://github.com/docker-library/postgres/blob/48d6cd0f57ea3f7de4a3d02d7b0ca8f2f9d6e991/9.3/Dockerfile)
+-	[`9.4.6`, `9.4` (*9.4/Dockerfile*)](https://github.com/docker-library/postgres/blob/48d6cd0f57ea3f7de4a3d02d7b0ca8f2f9d6e991/9.4/Dockerfile)
+-	[`9.5.1`, `9.5`, `9`, `latest` (*9.5/Dockerfile*)](https://github.com/docker-library/postgres/blob/48d6cd0f57ea3f7de4a3d02d7b0ca8f2f9d6e991/9.5/Dockerfile)
+
+[![](https://badge.imagelayers.io/postgres:latest.svg)](https://imagelayers.io/?images=postgres:9.1.20,postgres:9.2.15,postgres:9.3.11,postgres:9.4.6,postgres:9.5.1)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/postgres`)](https://github.com/docker-library/official-images/blob/master/library/postgres). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -19,7 +20,7 @@ PostgreSQL implements the majority of the SQL:2011 standard, is ACID-compliant a
 
 > [wikipedia.org/wiki/PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png)
 
 # How to use this image
 
@@ -62,9 +63,26 @@ This optional environment variable is used in conjunction with `POSTGRES_PASSWOR
 
 This optional environment variable can be used to define another location - like a subdirectory - for the database files. The default is `/var/lib/postgresql/data`, but if the data volume you're using is a fs mountpoint (like with GCE persistent disks), Postgres `initdb` recommends a subdirectory (for example `/var/lib/postgresql/data/pgdata` ) be created to contain the data.
 
+### `POSTGRES_DB`
+
+This optional environment variable can be used to define a different name for the default database that is created when the image is first started. If it is not specified, then the value of `POSTGRES_USER` will be used.
+
 # How to extend this image
 
 If you would like to do additional initialization in an image derived from this one, add one or more `*.sql` or `*.sh` scripts under `/docker-entrypoint-initdb.d` (creating the directory if necessary). After the entrypoint calls `initdb` to create the default `postgres` user and database, it will run any `*.sql` files and source any `*.sh` scripts found in that directory to do further initialization before starting the service.
+
+For example, to add an additional user and database, add the following to `/docker-entrypoint-initdb.d/init-user-db.sh`:
+
+```bash
+#!/bin/bash
+set -e
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
+	CREATE USER docker;
+	CREATE DATABASE docker;
+	GRANT ALL PRIVILEGES ON DATABASE docker TO docker;
+EOSQL
+```
 
 These initialization files will be executed in sorted name order as defined by the current locale, which defaults to `en_US.utf8`. Any `*.sql` files will be executed by `POSTGRES_USER`, which defaults to the `postgres` superuser. It is recommended that any `psql` commands that are run inside of a `*.sh` script be executed as `POSTGRES_USER` by using the `--username "$POSTGRES_USER"` flag. This user will be able to connect without a password due to the presence of `trust` authentication for Unix socket connections made inside the container.
 
@@ -84,7 +102,7 @@ If there is no database when `postgres` starts in a container, then `postgres` w
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

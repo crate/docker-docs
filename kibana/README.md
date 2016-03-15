@@ -1,9 +1,12 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0.3`, `4.0` (*4.0/Dockerfile*)](https://github.com/docker-library/kibana/blob/0ffeed9bb61036fca3f23fa4f9208b90a484f150/4.0/Dockerfile)
--	[`4.1.3`, `4.1` (*4.1/Dockerfile*)](https://github.com/docker-library/kibana/blob/c05e1e821fcda0ca1908653c00adae04eeb95548/4.1/Dockerfile)
--	[`4.2.1`, `4.2` (*4.2/Dockerfile*)](https://github.com/docker-library/kibana/blob/b044e432f4621cc5be5fbe520c76b81df1f28c62/4.2/Dockerfile)
--	[`4.3.0`, `4.3`, `4`, `latest` (*4.3/Dockerfile*)](https://github.com/docker-library/kibana/blob/18976f0d8fdf2e53299c61b56ad8a040dff133fc/4.3/Dockerfile)
+-	[`4.0.3`, `4.0` (*4.0/Dockerfile*)](https://github.com/docker-library/kibana/blob/b606ae998472df66e0c8e769ed070129edad12be/4.0/Dockerfile)
+-	[`4.1.6`, `4.1` (*4.1/Dockerfile*)](https://github.com/docker-library/kibana/blob/541a035374494d9386c23d58ddcf5a52a0f6078e/4.1/Dockerfile)
+-	[`4.2.2`, `4.2` (*4.2/Dockerfile*)](https://github.com/docker-library/kibana/blob/b606ae998472df66e0c8e769ed070129edad12be/4.2/Dockerfile)
+-	[`4.3.3`, `4.3` (*4.3/Dockerfile*)](https://github.com/docker-library/kibana/blob/541a035374494d9386c23d58ddcf5a52a0f6078e/4.3/Dockerfile)
+-	[`4.4.2`, `4.4`, `4`, `latest` (*4.4/Dockerfile*)](https://github.com/docker-library/kibana/blob/541a035374494d9386c23d58ddcf5a52a0f6078e/4.4/Dockerfile)
+
+[![](https://badge.imagelayers.io/kibana:latest.svg)](https://imagelayers.io/?images=kibana:4.0.3,kibana:4.1.6,kibana:4.2.2,kibana:4.3.3,kibana:4.4.2)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/kibana`)](https://github.com/docker-library/official-images/blob/master/library/kibana). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -17,7 +20,7 @@ Kibana is a registered trademark of Elasticsearch BV.
 
 > [wikipedia.org/wiki/Kibana](https://en.wikipedia.org/wiki/Kibana)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/kibana/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/8965672c23522a2196bba6a431a8746c10116304/kibana/logo.png)
 
 # How to use this image
 
@@ -53,7 +56,7 @@ View [license information](https://github.com/elastic/kibana/blob/4557a6fc0ba08c
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

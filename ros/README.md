@@ -9,6 +9,8 @@
 -	[`jade-robot` (*ros/jade/jade-robot/Dockerfile*)](https://github.com/osrf/docker_images/blob/d579b9325fd8546a29dfc064661b005cfbc9cf8b/ros/jade/jade-robot/Dockerfile)
 -	[`jade-perception` (*ros/jade/jade-perception/Dockerfile*)](https://github.com/osrf/docker_images/blob/d579b9325fd8546a29dfc064661b005cfbc9cf8b/ros/jade/jade-perception/Dockerfile)
 
+[![](https://badge.imagelayers.io/ros:latest.svg)](https://imagelayers.io/?images=ros:indigo-ros-core,ros:indigo-ros-base,ros:indigo-robot,ros:indigo-perception,ros:jade-ros-core,ros:jade-ros-base,ros:jade-robot,ros:jade-perception)
+
 For more information about this image and its history, please see [the relevant manifest file (`library/ros`)](https://github.com/docker-library/official-images/blob/master/library/ros). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
 For detailed information about the virtual/transfer sizes and individual layers of each of the above supported tags, please see [the `ros/tag-details.md` file](https://github.com/docker-library/docs/blob/master/ros/tag-details.md) in [the `docker-library/docs` GitHub repo](https://github.com/docker-library/docs).
@@ -19,7 +21,7 @@ The Robot Operating System (ROS) is a set of software libraries and tools that h
 
 > [wikipedia.org/wiki/Robot_Operating_System](https://en.wikipedia.org/wiki/Robot_Operating_System)
 
-[![logo](https://raw.githubusercontent.com/docker-library/docs/master/ros/logo.png)](http://www.ros.org/)
+[![logo](https://raw.githubusercontent.com/docker-library/docs/0074e9dac72a35e5058f356885121aa82572682f/ros/logo.png)](http://www.ros.org/)
 
 # How to use this image
 
@@ -76,7 +78,6 @@ The ROS runtime "graph" is a peer-to-peer network of processes (potentially dist
 
 ## Deployment example
 
-**NOTE:** This requires the experimental version of Docker for future networking features.  
 If we want our all ROS nodes to easily talk to each other, we'll can use a virtual network to connect the separate containers. In this short example, we'll create a virtual network, spin up a new container running `roscore` advertised as the `master` service on the new network, then spawn a message publisher and subscriber process as services on the same network.
 
 ### Build image
@@ -111,8 +112,8 @@ $ docker build --tag ros:ros-tutorials .
 > To create a container for the ROS master and advertise it's service:
 
 ```console
-$ docker run -it --rm\
-    --publish-service=master.foo \
+$ docker run -it --rm \
+    --net foo \
     --name master \
     ros:ros-tutorials \
     roscore
@@ -121,11 +122,11 @@ $ docker run -it --rm\
 > Now you can see that master is running and is ready manage our other ROS nodes. To add our `talker` node, we'll need to point the relevant environment variable to the master service:
 
 ```console
-$ docker run -it --rm\
-    --publish-service=talker.foo \
+$ docker run -it --rm \
+    --net foo \
+    --name talker \
     --env ROS_HOSTNAME=talker \
     --env ROS_MASTER_URI=http://master:11311 \
-    --name talker \
     ros:ros-tutorials \
     rosrun roscpp_tutorials talker
 ```
@@ -133,11 +134,11 @@ $ docker run -it --rm\
 > Then in another terminal, run the `listener` node similarly:
 
 ```console
-$ docker run -it --rm\
-    --publish-service=listener.foo \
+$ docker run -it --rm \
+    --net foo \
+    --name listener \
     --env ROS_HOSTNAME=listener \
     --env ROS_MASTER_URI=http://master:11311 \
-    --name listener \
     ros:ros-tutorials \
     rosrun roscpp_tutorials listener
 ```
@@ -189,6 +190,63 @@ $ docker stop master talker listener
 $ docker rm master talker listener
 ```
 
+### Compose
+
+Now that you have an appreciation for bootstrapping a distributed ROS example manually, lets try and automate it using [`docker-compose`](https://docs.docker.com/compose/)\.
+
+> Start by making a folder named `rostutorials` and moving the Dockerfile we used earlier inside this directory. Then create a yaml file named `docker-compose.yml` in the same directory and paste the following inside:
+
+```yaml
+master:
+  build: .
+  container_name: master
+  command:
+    - roscore
+
+talker:
+  build: .
+  container_name: talker
+  environment:
+    - "ROS_HOSTNAME=talker"
+    - "ROS_MASTER_URI=http://master:11311"
+  command: rosrun roscpp_tutorials talker
+
+listener:
+  build: .
+  container_name: listener
+  environment:
+    - "ROS_HOSTNAME=listener"
+    - "ROS_MASTER_URI=http://master:11311"
+  command: rosrun roscpp_tutorials listener
+```
+
+> Now from inside the same folder, use docker-copose to launch our ROS nodes and specify that they coexist on their own network:
+
+```console
+$ docker-compose --x-networking up -d
+```
+
+> Notice that a new network named `rostutorials` has now been created, you can inspect it further with:
+
+```console
+$ docker network inspect rostutorials
+```
+
+> We can monitor the logged output of each service, such as the listener node like so:
+
+```console
+$ docker-compose logs listener
+```
+
+> Finally, we can stop and remove all the relevant containers using docker-copose from the same directory:
+
+```console
+$ docker-compose stop
+$ docker-compose rm
+```
+
+> Note: the auto-generated network, `rostutorials`, will persist over the life of the docker engine or until you explicitly remove it using [`docker network rm`](https://docs.docker.com/engine/reference/commandline/network_rm/)\.
+
 # More Resources
 
 [ROS.org](http://www.ros.org/): Main ROS website  
@@ -205,7 +263,7 @@ While the core parts of ROS are licensed under the BSD license, other licenses a
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 

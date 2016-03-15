@@ -1,7 +1,10 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`5.5.46`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/percona/blob/ee41cc830ff124c4a5c9de605b1a7e338ca6db91/5.5/Dockerfile)
--	[`5.6.27`, `5.6`, `5`, `latest` (*5.6/Dockerfile*)](https://github.com/docker-library/percona/blob/ee41cc830ff124c4a5c9de605b1a7e338ca6db91/5.6/Dockerfile)
+-	[`5.5.48`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/percona/blob/c6fe35f7393ff0dcad2acb5be63bd36f48b21050/5.5/Dockerfile)
+-	[`5.6.29`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/percona/blob/c6fe35f7393ff0dcad2acb5be63bd36f48b21050/5.6/Dockerfile)
+-	[`5.7.10`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/percona/blob/c6fe35f7393ff0dcad2acb5be63bd36f48b21050/5.7/Dockerfile)
+
+[![](https://badge.imagelayers.io/percona:latest.svg)](https://imagelayers.io/?images=percona:5.5.48,percona:5.6.29,percona:5.7.10)
 
 For more information about this image and its history, please see [the relevant manifest file (`library/percona`)](https://github.com/docker-library/official-images/blob/master/library/percona). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
 
@@ -15,7 +18,7 @@ It aims to retain close compatibility to the official MySQL releases, while focu
 
 > [wikipedia.org/wiki/Percona_Server](https://en.wikipedia.org/wiki/Percona_Server)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/percona/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/4743f11523a1d9c8dc28cc338447a4fd622f92b4/percona/logo.png)
 
 # How to use this image
 
@@ -81,6 +84,20 @@ Note that users on host systems with SELinux enabled may see issues with this. T
 $ chcon -Rt svirt_sandbox_file_t /my/custom
 ```
 
+### Configuration without a `cnf` file
+
+Many configuration options can be passed as flags to `mysqld`. This will give you the flexibility to customize the container without needing a `cnf` file. For example, if you want to change the default encoding and collation for all tables to use UTF-8 (`utf8mb4`) just run the following:
+
+```console
+$ docker run --name some-percona -e MYSQL_ROOT_PASSWORD=my-secret-pw -d percona:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+```
+
+If you would like to see a complete list of available options, just run:
+
+```console
+$ docker run -it --rm percona:tag --verbose --help
+```
+
 ## Environment Variables
 
 When you start the `percona` image, you can adjust the configuration of the Percona instance by passing one or more environment variables on the `docker run` command line. Do note that none of the variables below will have any effect if you start the container with a data directory that already contains a database: any pre-existing database will always be left untouched on container startup.
@@ -143,7 +160,7 @@ If you start your `percona` container instance with a data directory that alread
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.9.1.
+This image is officially supported on Docker version 1.10.3.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 
