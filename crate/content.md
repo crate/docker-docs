@@ -32,14 +32,16 @@ Learn more about Crate and Docker and visit our [Docker page](https://crate.io/c
 ## How to use this image
 
 To form a cluster, just start the Crate container a few times in the
-background:
+background. This starts a couple of containers on your machine which
+discover each other via multicast. In a production environment you'd
+run Crate on different machines:
 
 ```console
 # docker run -d crate
 ```
 
-To access the admin UI, point your browser to port 4200 of any data
-node while you start it or look up its IP later on:
+To access the admin UI, point your browser to port tcp/4200 of a data
+node of your choice while you start it or look up its IP later on:
 
 ```console
 # firefox "http://$(docker inspect --format='{{.NetworkSettings.IPAddress}}' $(docker run -d crate)):4200/admin"
@@ -51,7 +53,7 @@ Crate stores all important data in `/data`. To attach it to a backup
 service, map the directory to the host:
 
 ```console
-# docker run -d -p 4200:4200 -p 4300:4300 -v <data-dir>:/data crate
+# docker run -d -v <data-dir>:/data crate
 ```
 
 Note, that there are way more sophisticated ways to [backup data with
@@ -97,9 +99,9 @@ as a rule of thumb to Crate like this:
 Crate uses multicast for node discovery by default. This means nodes
 started in the same multicast zone will discover each other
 automatically. However, Docker multicast support between containers on
-different hosts depends on the overlay driver. Otherwise you have to
-[enable unicast in your custom
-`crate.yml`](https://crate.io/docs/en/latest/best_practice/multi_node_setup.html).
+different hosts depends on the overlay network driver. If that does
+not support multicast, you have to [enable unicast in your custom
+`crate.yml`](https://crate.io/docs/reference/best_practice/multi_node_setup.html).
 
 Crate publishes the hostname it runs on for discovery within the
 cluster. If the address of the docker container differs from the
@@ -125,9 +127,7 @@ adapt container and node names on the two other nodes:
 ```console
 # HOSTS="crate1.example.com:4300,crate2.example.com:4300,crate3.example.com:4300"
 # HOST="crate1.example.com"
-# docker run -d \
-    -p 4200:4200 \
-    -p 4300:4300 \
+# docker run -d -P \
     --name crate1-container \
     --volume /mnt/data:/data \
     --env CRATE_HEAP_SIZE=8g \
