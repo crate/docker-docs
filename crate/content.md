@@ -47,7 +47,7 @@ node of your choice while you start it or look up its IP later on:
 # firefox "http://$(docker inspect --format='{{.NetworkSettings.IPAddress}}' $(docker run -d crate)):4200/admin"
 ```
 
-### Attach persistent data directory
+## Attach persistent data directory
 
 Crate stores all important data in `/data`. To attach it to a backup
 service, map the directory to the host:
@@ -59,7 +59,7 @@ service, map the directory to the host:
 Note, that there are way more sophisticated ways to [backup data with
 builtin commands like `CREATE SNAPSHOT`](https://crate.io/a/backing-up-and-restoring-crate/).
 
-### Use custom Crate configuration
+## Use custom Crate configuration
 
 Crate is basically controlled by a single configuration file which has
 sensible defaults already. If you derive your container from the Crate
@@ -82,7 +82,7 @@ For further configuration options please refer to the
 [Configuration](https://crate.io/docs/stable/configuration.html)
 section of the online documentation.
 
-### Environment
+## Environment
 
 Crate recognizes a few environment variables like `CRATE_HEAP_SIZE`
 that need to be set with the `--env` option before the actual Crate
@@ -94,7 +94,14 @@ as a rule of thumb to Crate like this:
 # docker run -d --env CRATE_HEAP_SIZE=32g crate
 ```
 
-### Multicast
+## Open Files
+
+Depending on the size of your installation Crate opens a lot of
+files. You can check the number of open files with `ulimit -n`. It
+depends on your host operation system. To increase the number start
+containers with the option `--ulimit nofile=65535:65535`:
+
+## Multicast
 
 Crate uses multicast for node discovery by default. This means nodes
 started in the same multicast zone will discover each other
@@ -118,7 +125,7 @@ If you change the transport port from the default `4300` to something
 else, you also need to pass the publish port to Crate by adding
 `-Des.transport.publish_port=4321` to your command.
 
-### Example Usage in a Multihost Setup
+## Example Usage in a Multihost Setup
 
 To start a Crate cluster in containers distributed to three hosts
 without multicast enabled, run this command on the first node and
@@ -127,7 +134,7 @@ adapt container and node names on the two other nodes:
 ```console
 # HOSTS="crate1.example.com:4300,crate2.example.com:4300,crate3.example.com:4300"
 # HOST="crate1.example.com"
-# docker run -d -P \
+# docker run -d -p 4200:4200 -p 4300:4300 \
     --name crate1-container \
     --volume /mnt/data:/data \
     --env CRATE_HEAP_SIZE=8g \
@@ -135,8 +142,18 @@ adapt container and node names on the two other nodes:
 	crate -Des.cluster.name=cratecluster \
               -Des.node.name=crate1 \
               -Des.transport.publish_port=4300 \
-              -Des.network.publish_host=$HOST \
+              -Des.network.publish_host="$HOST" \
               -Des.multicast.enabled=false \
-              -Des.discovery.zen.ping.unicast.hosts=$HOSTS \
+              -Des.discovery.zen.ping.unicast.hosts="$HOSTS" \
               -Des.discovery.zen.minimum_master_nodes=2
+```
+
+## Crate Shell
+
+The Crate Shell `crash` is bundled with the Docker image. Since the
+`crash` executable is already in the `$PATH` environment variable,
+simply run:
+
+```console
+# docker run --rm -ti crate/crate crash --hosts [host1, host2, ...]
 ```
