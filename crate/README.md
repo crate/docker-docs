@@ -5,7 +5,7 @@
 
 [![](https://badge.imagelayers.io/crate:latest.svg)](https://imagelayers.io/?images=crate:latest,crate:0.52)
 
-For more information about this image and its history, please see [the relevant manifest file (`library/crate`)](https://github.com/docker-library/official-images/blob/master/library/crate). This image is updated via pull requests to [the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images).
+For more information about this image and its history, please see [the relevant manifest file (`library/crate`)](https://github.com/docker-library/official-images/blob/master/library/crate). This image is updated via [pull requests to the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fcrate).
 
 For detailed information about the virtual/transfer sizes and individual layers of each of the above supported tags, please see [the `crate/tag-details.md` file](https://github.com/docker-library/docs/blob/master/crate/tag-details.md) in [the `docker-library/docs` GitHub repo](https://github.com/docker-library/docs).
 
@@ -34,7 +34,7 @@ regardless on which host the data nodes run.
 
 [Crate](https://crate.io/)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/de809758bd3f9724caa5377695f161795f3eb8a1/crate/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/2517900006ae5f4c03c1d43235930c59f4614394/crate/logo.png)
 
 ## How To Use This Image
 
@@ -189,10 +189,13 @@ Please see [the Docker installation documentation](https://docs.docker.com/insta
 
 Documentation for this image is stored in the [`crate/` directory](https://github.com/docker-library/docs/tree/master/crate) of the [`docker-library/docs` GitHub repo](https://github.com/docker-library/docs). Be sure to familiarize yourself with the [repository's `REAMDE.md` file](https://github.com/docker-library/docs/blob/master/README.md) before attempting a pull request.
 
+Visit [Crate on Docker](https://crate.io/docs/install/containers/docker/) and get further documentation about how to get started with Crate.
+
 ## Issues
 
 If you have any problems with or questions about this image, please
 contact us through a [GitHub issue](https://github.com/crate/docker-crate/issues).
+
 
 If you have any questions or suggestions, we are happy to help! Feel
 free to join our [public Crate community on Slack](https://crate.io/docs/support/slackin/).
