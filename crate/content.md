@@ -115,3 +115,67 @@ The Crate Shell `crash` is bundled with the Docker image. Since the `crash` exec
 ```console
 # docker run --rm -ti crate crash --hosts [host1, host2, ...]
 ```
+
+## Orchestration with Docker Swarm
+
+Starting with Docker engine version 1.12, Docker introduced orchestration tools into Swarm to natively deploy and manage application services.
+
+This example will assume you have three networked machines to act as members of the cluster. One as the master, and two workers.
+
+To create a swarm, ssh into the machine that will be your master node and run:
+
+```bash
+docker swarm init --listen-addr <MANAGER-IP>:<PORT>
+```
+
+The output of this command will tell you what command to run on the worker nodes, so ssh into each of them and run it.
+
+Next you create a Crate service on the cluster that you can scale and use. In theory this is a simple `docker service create` command, but to make Crate work effectively across multiple machines, things are more complex.
+
+The bash script below finds the nodes in the Swarm, specifies the hosts along with other useful settings, and then creates the service required:
+
+```bash
+MIN_MASTER_NODES=$(($(($(docker node ls | wc -l) - 1)) / 2 + 1))
+HOSTS=$(docker node ls | cut -d " " -f4,5 | grep '[^[:blank:]]' | sed ':a;N;$!ba;s/\n/:4300,/g' | tr -d ' '):4300
+IFS=',' read -ra SPLITHOSTS <<< "$HOSTS"
+EXPECTED_HOSTS=${#SPLITHOSTS[@]}
+docker service create \
+ --name crate \
+ --mode global \
+ --publish 4200:4200/tcp \
+ --publish 4300:4300/tcp \
+ --env CRATE_HEAP_SIZE=2g \
+ --update-delay 60s \
+ --update-parallelism 1 \
+ crate/crate:0.55.2 \
+ crate \
+   -Des.cluster.name=crate-swarm \
+   -Des.multicast.enabled=false \
+   -Des.discovery.zen.ping.unicast.hosts=$1 \
+   -Des.discovery.zen.minimum_master_nodes=$MIN_MASTER_NODES \
+   -Des.gateway.recover_after_nodes=$MIN_MASTER_NODES \
+   -Des.gateway.recover_after_time=5m \
+   -Des.gateway.expected_nodes=$EXPECTED_HOSTS \
+   -Des.gateway.recover_after_nodes=$MIN_MASTER_NODES \
+   -Des.http.cors.enabled=true \
+   -Des.http.cors.allow-credentials=true \
+   -Des.http.cors.allow-origin=*
+```
+
+A lot of the settings are specific to Crate, but most essential are the `--mode` argument that specifies `global` to run one instance of the service per node and `--publish` to set which ports from the node should be published.
+
+You can now scale the service using the following command:
+
+```bash
+docker service scale crate=5
+```
+
+And use:
+
+```bash
+docker service tasks crate
+```
+
+To inspect the number instances of the service are now running.
+
+You can find out more information on Swarm mode [here](https://docs.docker.com/engine/swarm/).
