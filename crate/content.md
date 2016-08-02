@@ -14,9 +14,9 @@ Crate provides several installation packages, including a supported Docker image
 
 This is an example configuration to run in a multi-host production environment. The configuration includes the required minimum settings:
 
--	Volume mapping
--	Port mapping to localhost (run only one container per machine)
--	Unicast host discovery
+- Volume mapping
+- Port mapping to localhost (run only one container per machine)
+- Unicast host discovery
 
 To start the Crate cluster in containers distributed to three hosts without multicast enabled, run this command on the first node and adapt the container and node names on the two other nodes:
 
@@ -61,7 +61,7 @@ For production use it's strongly recommended to use only one container per machi
 
 ## Attach Persistent Data Directory
 
-Crate stores all important data in */data*. It's advised to mount this directory to avoid writing within the docker image:
+Crate stores all important data in _/data_. It's advised to mount this directory to avoid writing within the docker image:
 
 ```console
 # docker run -d -v <data-dir>:/data crate crate
@@ -85,7 +85,7 @@ For further configuration options refer to the [Configuration](https://crate.io/
 
 ## Environment
 
-Crate recognizes environment variables like `CRATE_HEAP_SIZE` that need to be set with the `--env` option before the actual Crate core starts. As a rule of thumb you may want to [assign about half of your memory ](https://crate.io/docs/reference/en/latest/configuration.html#crate-heap-size) to Crate:
+Crate recognizes environment variables like `CRATE_HEAP_SIZE` that need to be set with the `--env` option before the actual Crate core starts. As a rule of thumb you may want to [assign about half of your memory](https://crate.io/docs/reference/en/latest/configuration.html#crate-heap-size) to Crate:
 
 ```console
 # docker run -d --env CRATE_HEAP_SIZE=32g crate crate
@@ -97,7 +97,7 @@ Depending on the size of your installation, Crate can open a lot of files. You c
 
 ## Multicast
 
-By Default, Crate uses multicast for node discovery. This means nodes started in the same multicast zone will discover each other automatically. Docker multicast support between containers on different hosts depends on an overlay network driver. If that does not support multicast, you have to [enable unicast in a custom*crate.yml*](https://crate.io/docs/reference/best_practice/multi_node_setup.html) file.
+By Default, Crate uses multicast for node discovery. This means nodes started in the same multicast zone will discover each other automatically. Docker multicast support between containers on different hosts depends on an overlay network driver. If that does not support multicast, you have to [enable unicast in a custom _crate.yml_](https://crate.io/docs/reference/best_practice/multi_node_setup.html) file.
 
 Crate publishes the hostname it runs on for discovery within the cluster. If the address of the docker container differs from the actual host the docker image is running on, this is the case if you do port mapping to the host via the `-p` option, you need to tell Crate to publish the address of the docker host instead:
 
