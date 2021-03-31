@@ -1,9 +1,9 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
 cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-repo="$1"
+repo="${1:-}"
 
 if [ -z "$repo" ]; then
 	echo >&2 'error: no repo specified'
@@ -24,11 +24,11 @@ if [ -s "$repo/github-repo" ]; then
 	canonicalRepo="$(< "$repo/github-repo")"
 fi
 canonicalRepo="$(curl -fsSLI -o /dev/null -w '%{url_effective}\n' "$canonicalRepo")" # follow redirects (http://stackoverflow.com/a/3077316/433558)
-travisRepo="${canonicalRepo#*://github.com/}"
+githubRepoName="${canonicalRepo#*://github.com/}"
 
-if [[ "$travisRepo" = elastic/* ]]; then
+if [[ "$githubRepoName" = elastic/* ]]; then
 	# Elastic points "github-repo" at their upstream elastic/xyz-docker repos, but we want our README stubs to still point at our integration repos
-	travisRepo="docker-library/$repo"
+	githubRepoName="docker-library/$repo"
 fi
 
 maintainer="$(sed -e 's!%%GITHUB-REPO%%!'"$canonicalRepo"'!g' "$repo/maintainer.md")"
@@ -61,22 +61,39 @@ badges=()
 n=$'\n'
 t=$'\t'
 
+branch='master'
 toTest=(
-	"https://img.shields.io/travis/$travisRepo/master.svg?label=Travis%20CI" "https://travis-ci.org/$travisRepo/branches"
-	"https://img.shields.io/appveyor/ci/$travisRepo/master.svg?label=AppVeyor" "https://ci.appveyor.com/project/$travisRepo"
-	"https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/update.sh/job/$repo.svg?label=Automated%20update.sh" "https://doi-janky.infosiftr.net/job/update.sh/job/$repo"
+	# "image badge URL"
+	# "image badge link/href"
+	# "badge test URL (to determine whether badge applies)"
+
+	"https://img.shields.io/github/workflow/status/$githubRepoName/GitHub%20CI/$branch?label=GitHub%20CI"
+	"https://github.com/$githubRepoName/actions?query=workflow%3A%22GitHub+CI%22+branch%3A$branch"
+	"https://github.com/$githubRepoName/blob/$branch/.github/workflows/ci.yml"
+
+	"https://img.shields.io/travis/$githubRepoName/$branch.svg?label=Travis%20CI"
+	"https://travis-ci.org/$githubRepoName/branches"
+	"https://github.com/$githubRepoName/blob/$branch/.travis.yml"
+
+	"https://img.shields.io/appveyor/ci/$githubRepoName/$branch.svg?label=AppVeyor"
+	"https://ci.appveyor.com/project/$githubRepoName"
+	"https://github.com/$githubRepoName/blob/$branch/.appveyor.yml"
+
+	"https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/update.sh/job/$repo.svg?label=Automated%20update.sh"
+	"https://doi-janky.infosiftr.net/job/update.sh/job/$repo/"
+	"https://doi-janky.infosiftr.net/job/update.sh/job/$repo/"
 )
 
-_check_shields_io_image() {
-	wget -qO- "$1" 2>/dev/null \
-		| grep -qvE 'unknown|invalid|access denied|not found'
+_wget_spider() {
+	wget -q -o /dev/null -O /dev/null --spider "$@"
 }
 
 set -- "${toTest[@]}"
 while [ "$#" -gt 0 ]; do
 	image="$1"; shift
 	url="$1"; shift
-	if _check_shields_io_image "$image"; then
+	testUrl="$1"; shift
+	if _wget_spider "$testUrl"; then
 		badges+=( "-${t}[![build status badge]($image)]($url)" )
 	fi
 done
@@ -87,22 +104,16 @@ if [ -n "$arches" ]; then
 	i=0
 	for arch in $arches put-shared; do
 		if [ "$arch" = 'put-shared' ]; then
-			jenkinsLink=
-			for jenkinsJob in "job/put-shared/job/light/job/$repo" 'job/put-shared/job/heavy'; do
-				jenkinsImage="https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/$jenkinsJob.svg?label=$arch"
-				if _check_shields_io_image "$jenkinsImage"; then
-					jenkinsLink="https://doi-janky.infosiftr.net/$jenkinsJob"
-					break
-				fi
-			done
-			if [ -z "$jenkinsLink" ]; then
-				continue
+			jenkinsJob="job/put-shared/job/light/job/$repo"
+			if ! _wget_spider "https://doi-janky.infosiftr.net/$jenkinsJob/"; then
+				jenkinsJob='job/put-shared/job/heavy'
 			fi
 		else
-			jenkinsLink="https://doi-janky.infosiftr.net/job/multiarch/job/$arch/job/$repo"
-			jenkinsImage="https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/$arch/job/$repo.svg?label=$arch"
+			jenkinsJob="job/multiarch/job/$arch/job/$repo"
 		fi
-		if _check_shields_io_image "$jenkinsImage"; then
+		jenkinsLink="https://doi-janky.infosiftr.net/$jenkinsJob/"
+		jenkinsImage="https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/$jenkinsJob.svg?label=$arch"
+		if _wget_spider "$jenkinsLink"; then
 			archTable="${archTable:-|} [![$arch build status badge]($jenkinsImage)]($jenkinsLink) |"
 			(( i = (i + 1) % 4 )) || : # modulo here needs to match the number of colums used below
 			if [ "$i" = 0 ]; then

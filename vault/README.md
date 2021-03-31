@@ -14,21 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.2.4`, `latest`](https://github.com/hashicorp/docker-vault/blob/b3bada3dad8ca86a6538ca43209a9b3253aff8b9/0.X/Dockerfile)
--	[`1.3.0-beta1`](https://github.com/hashicorp/docker-vault/blob/9ddb0f653374af7bb64a1ac4cbd1c64a1784557c/0.X/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/hashicorp/docker-vault/issues](https://github.com/hashicorp/docker-vault/issues)
 
 -	**Maintained by**:  
 	[HashiCorp](https://github.com/hashicorp/docker-vault)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.7.0`, `latest`](https://github.com/hashicorp/docker-vault/blob/b53096266e28cb02e8d7d72eb35e71966c50e662/0.X/Dockerfile)
+-	[`1.7.0-rc2`](https://github.com/hashicorp/docker-vault/blob/d859985bd2095f8990251d2bb7899da703997af3/0.X/Dockerfile)
+-	[`1.7.0-rc1`](https://github.com/hashicorp/docker-vault/blob/cf73ab856a98b3f240f9545afe4184a22ec16b44/0.X/Dockerfile)
+-	[`1.6.3`](https://github.com/hashicorp/docker-vault/blob/fb6bc85ef0828edb45abac40d5cb55a1d5bf50a6/0.X/Dockerfile)
+-	[`1.5.7`](https://github.com/hashicorp/docker-vault/blob/25c5a3a51e0730bd1aae9f924d3700a230f1488c/0.X/Dockerfile)
+-	[`1.4.7`](https://github.com/hashicorp/docker-vault/blob/e4635725bcf8ce18f9d8fd5be5a69bf882d21223/0.X/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/hashicorp/docker-vault/issues](https://github.com/hashicorp/docker-vault/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/vault/), [`arm32v6`](https://hub.docker.com/r/arm32v6/vault/), [`arm64v8`](https://hub.docker.com/r/arm64v8/vault/), [`i386`](https://hub.docker.com/r/i386/vault/)
@@ -38,7 +44,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/vault`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fvault)  
+	[official-images repo's `library/vault` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fvault)  
 	[official-images repo's `library/vault` file](https://github.com/docker-library/official-images/blob/master/library/vault) ([history](https://github.com/docker-library/official-images/commits/master/library/vault))
 
 -	**Source of this description**:  

@@ -14,24 +14,26 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`v2.0.4-windowsservercore-1809`, `2.0.4-windowsservercore-1809`, `v2.0-windowsservercore-1809`, `2.0-windowsservercore-1809`, `montdor-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/containous/traefik-library-image/blob/a9b658f7321a0a76f4cf3c4636d01c90a65a982b/windows/1809/Dockerfile)
--	[`v2.0.4`, `2.0.4`, `v2.0`, `2.0`, `montdor`, `latest`](https://github.com/containous/traefik-library-image/blob/a9b658f7321a0a76f4cf3c4636d01c90a65a982b/alpine/Dockerfile)
--	[`v1.7.19-windowsservercore-1809`, `1.7.19-windowsservercore-1809`, `v1.7-windowsservercore-1809`, `1.7-windowsservercore-1809`, `maroilles-windowsservercore-1809`](https://github.com/containous/traefik-library-image/blob/fffbc9254282cdd9496d6978aab070b798c6959d/windows/1809/Dockerfile)
--	[`v1.7.19-alpine`, `1.7.19-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`](https://github.com/containous/traefik-library-image/blob/fffbc9254282cdd9496d6978aab070b798c6959d/alpine/Dockerfile)
--	[`v1.7.19`, `1.7.19`, `v1.7`, `1.7`, `maroilles`](https://github.com/containous/traefik-library-image/blob/fffbc9254282cdd9496d6978aab070b798c6959d/scratch/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/containous/traefik-library-image/issues](https://github.com/containous/traefik-library-image/issues)
 
 -	**Maintained by**:  
 	[the Traefik Project](https://github.com/containous/traefik-library-image)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`v2.4.8-windowsservercore-1809`, `2.4.8-windowsservercore-1809`, `v2.4-windowsservercore-1809`, `2.4-windowsservercore-1809`, `livarot-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/c704f6f1db80e36ed01040d5da27d753f2a03ad1/windows/1809/Dockerfile)
+-	[`v2.4.8`, `2.4.8`, `v2.4`, `2.4`, `livarot`, `latest`](https://github.com/traefik/traefik-library-image/blob/c704f6f1db80e36ed01040d5da27d753f2a03ad1/alpine/Dockerfile)
+-	[`v1.7.29-windowsservercore-1809`, `1.7.29-windowsservercore-1809`, `v1.7-windowsservercore-1809`, `1.7-windowsservercore-1809`, `maroilles-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/7dd8fea4e6dd7dae69900c171b356d91d696fca6/windows/1809/Dockerfile)
+-	[`v1.7.29-alpine`, `1.7.29-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`](https://github.com/traefik/traefik-library-image/blob/7dd8fea4e6dd7dae69900c171b356d91d696fca6/alpine/Dockerfile)
+-	[`v1.7.29`, `1.7.29`, `v1.7`, `1.7`, `maroilles`](https://github.com/traefik/traefik-library-image/blob/7dd8fea4e6dd7dae69900c171b356d91d696fca6/scratch/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/containous/traefik-library-image/issues](https://github.com/containous/traefik-library-image/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)
@@ -41,7 +43,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/traefik`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Ftraefik)  
+	[official-images repo's `library/traefik` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Ftraefik)  
 	[official-images repo's `library/traefik` file](https://github.com/docker-library/official-images/blob/master/library/traefik) ([history](https://github.com/docker-library/official-images/commits/master/library/traefik))
 
 -	**Source of this description**:  

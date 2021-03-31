@@ -14,21 +14,23 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`7.4.2`](https://github.com/docker-library/logstash/blob/08f0241e9b8f15a57a82f8d9283795f2ab71341f/7/Dockerfile)
--	[`6.8.4`](https://github.com/docker-library/logstash/blob/034ec4e7c3f9156f11e8d44d850a0af637a58bea/6/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[the Elastic Team](https://github.com/elastic/logstash)
 
 -	**Where to get help**:  
 	the [Logstash Discuss Forums](https://discuss.elastic.co/c/logstash) and the [Elastic community](https://www.elastic.co/community).
 
--	**Where to file issues**:  
-	https://github.com/elastic/logstash-docker/issues
+# Supported tags and respective `Dockerfile` links
 
--	**Maintained by**:  
-	[the Elastic Team](https://github.com/elastic/logstash-docker)
+-	[`7.11.2`](https://github.com/docker-library/logstash/blob/93759d0ebd12496805f239d4de088d7014def17f/7/Dockerfile)
+-	[`6.8.14`](https://github.com/docker-library/logstash/blob/4a715b5d08700e32cd60b7b38d09eaa46bdf8587/6/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	For issues with Logstash Docker Image or Logstash: https://github.com/elastic/logstash/issues
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/logstash/)
@@ -38,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/logstash`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Flogstash)  
+	[official-images repo's `library/logstash` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Flogstash)  
 	[official-images repo's `library/logstash` file](https://github.com/docker-library/official-images/blob/master/library/logstash) ([history](https://github.com/docker-library/official-images/commits/master/library/logstash))
 
 -	**Source of this description**:  

@@ -14,21 +14,24 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`6.3`, `6.3.1-1`, `6.3.1`, `6`, `latest`, `fresh`](https://github.com/varnish/docker-varnish/blob/fe5dc755a0325fd106f798de97d30dbd9d9ce836/fresh/debian/Dockerfile)
--	[`6.0`, `6.0.5-1`, `6.0.5`, `stable`](https://github.com/varnish/docker-varnish/blob/fe5dc755a0325fd106f798de97d30dbd9d9ce836/stable/debian/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/varnish/docker-varnish/issues](https://github.com/varnish/docker-varnish/issues)
 
 -	**Maintained by**:  
 	[the Varnish Docker Community](https://github.com/varnish/docker-varnish)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`6.0`, `6.0.7-1`, `6.0.7`, `stable`](https://github.com/varnish/docker-varnish/blob/c0846f15b04cd499a1df1fb62f0693b41a84e636/stable/debian/Dockerfile)
+-	[`6.6`, `6.6.0-1`, `6.6.0`, `6`, `latest`, `fresh`](https://github.com/varnish/docker-varnish/blob/702cb88b01771ff6940b865f0a1f86e98bc41b0a/fresh/debian/Dockerfile)
+-	[`6.5`, `6.5.1-1`, `6.5.1`](https://github.com/varnish/docker-varnish/blob/f26947e3a1d7ab5e3e76114d58e54f0ddee13534/fresh/debian/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/varnish/docker-varnish/issues](https://github.com/varnish/docker-varnish/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/varnish/)
@@ -38,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/varnish`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fvarnish)  
+	[official-images repo's `library/varnish` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fvarnish)  
 	[official-images repo's `library/varnish` file](https://github.com/docker-library/official-images/blob/master/library/varnish) ([history](https://github.com/docker-library/official-images/commits/master/library/varnish))
 
 -	**Source of this description**:  
@@ -69,13 +72,15 @@ backend default {
 Then run:
 
 ```console
-$ docker run --name my-running-varnish -v /path/to/default.vcl:/etc/varnish/default.vcl:ro --tmpfs /usr/local/var/varnish:exec -d varnish
+# we need both a configuration file at /etc/varnish/default.vcl
+# and our workdir to be mounted as tmpfs to avoid disk I/O
+$ docker run -v /path/to/default.vcl:/etc/varnish/default.vcl:ro --tmpfs /var/lib/varnish:exec varnish
 ```
 
 Alternatively, a simple `Dockerfile` can be used to generate a new image that includes the necessary `default.vcl` (which is a much cleaner solution than the bind mount above):
 
 ```dockerfile
-FROM varnish:6.2
+FROM varnish
 
 COPY default.vcl /etc/varnish/
 ```
@@ -83,13 +88,41 @@ COPY default.vcl /etc/varnish/
 Place this file in the same directory as your `default.vcl`, run `docker build -t my-varnish .`, then start your container:
 
 ```console
-$ docker run --name my-running-varnish --tmpfs /var/lib/varnish:exec -d my-varnish
+$ docker --tmpfs /var/lib/varnish:exec my-varnish
+```
+
+### Additional configuration
+
+By default, the containers will use a cache size of 100MB, which is usually a bit too small, but you can quickly set it through the `VARNISH_SIZE` environment variable:
+
+```console
+$ docker run --tmpfs /var/lib/varnish:exec -e VARNISH_SIZE=2G varnish
+```
+
+Additionally, you can add arguments to `docker run` affter `varnish`, if the first one starts with a `-`, they will be appendend to the [default command](https://github.com/varnish/docker-varnish/blob/master/docker-varnish-entrypoint#L8):
+
+```console
+# extend the default keep period
+$ docker run --tmpfs /var/lib/varnish:exec -e VARNISH_SIZE=2G varnish -p default_keep=300
+```
+
+If your first argument after `varnish` doesn't start with `-`, it will be interpreted as a command to override the default one:
+
+```console
+# show the command-line options
+$ docker run varnish varnishd -?
+
+# list parameters usable with -p
+$ docker run varnish varnishd -x parameter
+
+# run the server with your own parameters (don't forget -F to not daemonize)
+$ docker run varnish varnishd -a :8080 -b 127.0.0.1:8181 -t 600 -p feature=+http2
 ```
 
 ### Exposing the port
 
 ```console
-$ docker run --name my-running-varnish --tmpfs /usr/local/var/varnish:exec -d -p 8080:80 my-varnish
++$ docker run --name my-running-varnish --tmpfs /var/lib/varnish:exec -d -p 8080:80 my-varnish
 ```
 
 Then you can hit `http://localhost:8080` or `http://host-ip:8080` in your browser.

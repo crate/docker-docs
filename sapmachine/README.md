@@ -14,21 +14,23 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`11`, `11.0.5`, `lts`](https://github.com/SAP/SapMachine-infrastructure/blob/1c93a00d33e446e1feff9ea40eaa320e1093e309/dockerfiles/official/lts/Dockerfile)
--	[`13`, `13.0.1`, `latest`](https://github.com/SAP/SapMachine-infrastructure/blob/9c0699a4b6a48335a9929cce5895dc6e6871b73d/dockerfiles/official/stable/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[The SapMachine Team](https://github.com/SAP/SapMachine)
 
 -	**Where to get help**:  
 	send an email to sapmachine@sap.com
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`16`, `latest`](https://github.com/SAP/SapMachine-infrastructure/blob/f27fc319a69584be8746243d9b7f7d5fca4c8221/dockerfiles/official/stable/Dockerfile)
+-	[`11`, `11.0.10`, `lts`](https://github.com/SAP/SapMachine-infrastructure/blob/9166199c6294bf8d82b5d6f9f7135eefa7cc8cd3/dockerfiles/official/lts/Dockerfile)
+
+# Quick reference (cont.)
+
 -	**Where to file issues**:  
 	[GitHub](https://github.com/SAP/SapMachine/issues) For more information see the [SapMachine Wiki](https://github.com/SAP/SapMachine/wiki).
-
--	**Maintained by**:  
-	[The SapMachine Team](https://github.com/SAP/SapMachine)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/sapmachine/)
@@ -38,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/sapmachine`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fsapmachine)  
+	[official-images repo's `library/sapmachine` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fsapmachine)  
 	[official-images repo's `library/sapmachine` file](https://github.com/docker-library/official-images/blob/master/library/sapmachine) ([history](https://github.com/docker-library/official-images/commits/master/library/sapmachine))
 
 -	**Source of this description**:  

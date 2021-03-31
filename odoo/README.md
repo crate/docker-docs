@@ -14,22 +14,24 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`13.0`, `13`, `latest`](https://github.com/odoo/docker/blob/596a7cabc07dd3b1d18b6c2832cace7328e36969/13.0/Dockerfile)
--	[`12.0`, `12`](https://github.com/odoo/docker/blob/596a7cabc07dd3b1d18b6c2832cace7328e36969/12.0/Dockerfile)
--	[`11.0`, `11`](https://github.com/odoo/docker/blob/596a7cabc07dd3b1d18b6c2832cace7328e36969/11.0/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/odoo/docker/issues](https://github.com/odoo/docker/issues)
 
 -	**Maintained by**:  
 	[Odoo](https://github.com/odoo/docker)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`14.0`, `14`, `latest`](https://github.com/odoo/docker/blob/ece2519a00a5609e73936e436575f5970fb52dc7/14.0/Dockerfile)
+-	[`13.0`, `13`](https://github.com/odoo/docker/blob/ece2519a00a5609e73936e436575f5970fb52dc7/13.0/Dockerfile)
+-	[`12.0`, `12`](https://github.com/odoo/docker/blob/ece2519a00a5609e73936e436575f5970fb52dc7/12.0/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/odoo/docker/issues](https://github.com/odoo/docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/odoo/)
@@ -39,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/odoo`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fodoo)  
+	[official-images repo's `library/odoo` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fodoo)  
 	[official-images repo's `library/odoo` file](https://github.com/docker-library/official-images/blob/master/library/odoo) ([history](https://github.com/docker-library/official-images/commits/master/library/odoo))
 
 -	**Source of this description**:  

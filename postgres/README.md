@@ -14,41 +14,43 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`12.0`, `12`, `latest`](https://github.com/docker-library/postgres/blob/a8613f4cda3e932245f09c4d0f6733462b14b582/12/Dockerfile)
--	[`12.0-alpine`, `12-alpine`, `alpine`](https://github.com/docker-library/postgres/blob/f08b03f05b690748660ff738975a104c19fc5500/12/alpine/Dockerfile)
--	[`11.5`, `11`](https://github.com/docker-library/postgres/blob/f19a74ec301fe755b70a822f905c8f537f67bc9a/11/Dockerfile)
--	[`11.5-alpine`, `11-alpine`](https://github.com/docker-library/postgres/blob/0a66d53fface5ccc8274f99712ba2f382a1caf42/11/alpine/Dockerfile)
--	[`10.10`, `10`](https://github.com/docker-library/postgres/blob/ff832cbf1e9ffe150f66f00a0837d5b59083fec9/10/Dockerfile)
--	[`10.10-alpine`, `10-alpine`](https://github.com/docker-library/postgres/blob/cad3d8b1f7ee31f3592c2911e014e81b9b2a1c8d/10/alpine/Dockerfile)
--	[`9.6.15`, `9.6`, `9`](https://github.com/docker-library/postgres/blob/3610f1e45365fb09c0fea29fa387b35f0efdb3a1/9.6/Dockerfile)
--	[`9.6.15-alpine`, `9.6-alpine`, `9-alpine`](https://github.com/docker-library/postgres/blob/c552b2bcd8dd5ef822463343b461fe0e31445b9d/9.6/alpine/Dockerfile)
--	[`9.5.19`, `9.5`](https://github.com/docker-library/postgres/blob/2803c9e12ac659335a394d5712e5da8cd10bdf69/9.5/Dockerfile)
--	[`9.5.19-alpine`, `9.5-alpine`](https://github.com/docker-library/postgres/blob/db452338a99764f0141aae60f7267a58f665e6b7/9.5/alpine/Dockerfile)
--	[`9.4.24`, `9.4`](https://github.com/docker-library/postgres/blob/dff03e96967d204b4df297e03a90086506600590/9.4/Dockerfile)
--	[`9.4.24-alpine`, `9.4-alpine`](https://github.com/docker-library/postgres/blob/4b652bf95baee9cd7ef31300a4938ad72d09ad88/9.4/alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/postgres/issues](https://github.com/docker-library/postgres/issues)
 
 -	**Maintained by**:  
 	[the PostgreSQL Docker Community](https://github.com/docker-library/postgres)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`13.2`, `13`, `latest`](https://github.com/docker-library/postgres/blob/7bd41786539082857396f4d1b4f1cb326ebee8de/13/Dockerfile)
+-	[`13.2-alpine`, `13-alpine`, `alpine`](https://github.com/docker-library/postgres/blob/a7aa19b8501df4c459dad78fd18e2b36fded9643/13/alpine/Dockerfile)
+-	[`12.6`, `12`](https://github.com/docker-library/postgres/blob/b349a7e67b5f434768f6ae685113e0accaed0842/12/Dockerfile)
+-	[`12.6-alpine`, `12-alpine`](https://github.com/docker-library/postgres/blob/4cec33a2ee0bbfbfa73d1ff7dd08e66cd2c74297/12/alpine/Dockerfile)
+-	[`11.11`, `11`](https://github.com/docker-library/postgres/blob/14f13e4b399ed1848fa24c2c1f5bd40c25732bdd/11/Dockerfile)
+-	[`11.11-alpine`, `11-alpine`](https://github.com/docker-library/postgres/blob/9693709797a818a5d56dfb81ecd34a2754eba2f7/11/alpine/Dockerfile)
+-	[`10.16`, `10`](https://github.com/docker-library/postgres/blob/cbe3131bd8e6d454d80d5c05695276b1d468b261/10/Dockerfile)
+-	[`10.16-alpine`, `10-alpine`](https://github.com/docker-library/postgres/blob/1267a1f1bb39bcf97d9ae498e1edcfd864c8db1d/10/alpine/Dockerfile)
+-	[`9.6.21`, `9.6`, `9`](https://github.com/docker-library/postgres/blob/11119157a345c282fea29b13d374bdea602a39ac/9.6/Dockerfile)
+-	[`9.6.21-alpine`, `9.6-alpine`, `9-alpine`](https://github.com/docker-library/postgres/blob/45cbba060d3674d4ff0529450267bb4656692363/9.6/alpine/Dockerfile)
+-	[`9.5.25`, `9.5`](https://github.com/docker-library/postgres/blob/b122f60426e69df9d6effbda45fe2ef659c1d4f2/9.5/Dockerfile)
+-	[`9.5.25-alpine`, `9.5-alpine`](https://github.com/docker-library/postgres/blob/6667795da15f1a2d2791021659f2f766828a4321/9.5/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/postgres/issues](https://github.com/docker-library/postgres/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/postgres/), [`arm32v5`](https://hub.docker.com/r/arm32v5/postgres/), [`arm32v6`](https://hub.docker.com/r/arm32v6/postgres/), [`arm32v7`](https://hub.docker.com/r/arm32v7/postgres/), [`arm64v8`](https://hub.docker.com/r/arm64v8/postgres/), [`i386`](https://hub.docker.com/r/i386/postgres/), [`ppc64le`](https://hub.docker.com/r/ppc64le/postgres/), [`s390x`](https://hub.docker.com/r/s390x/postgres/)
+	[`amd64`](https://hub.docker.com/r/amd64/postgres/), [`arm32v5`](https://hub.docker.com/r/arm32v5/postgres/), [`arm32v6`](https://hub.docker.com/r/arm32v6/postgres/), [`arm32v7`](https://hub.docker.com/r/arm32v7/postgres/), [`arm64v8`](https://hub.docker.com/r/arm64v8/postgres/), [`i386`](https://hub.docker.com/r/i386/postgres/), [`mips64le`](https://hub.docker.com/r/mips64le/postgres/), [`ppc64le`](https://hub.docker.com/r/ppc64le/postgres/), [`s390x`](https://hub.docker.com/r/s390x/postgres/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/postgres/` directory](https://github.com/docker-library/repo-info/blob/master/repos/postgres) ([history](https://github.com/docker-library/repo-info/commits/master/repos/postgres))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/postgres`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fpostgres)  
+	[official-images repo's `library/postgres` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fpostgres)  
 	[official-images repo's `library/postgres` file](https://github.com/docker-library/official-images/blob/master/library/postgres) ([history](https://github.com/docker-library/official-images/commits/master/library/postgres))
 
 -	**Source of this description**:  
@@ -126,21 +128,23 @@ There are many ways to extend the `postgres` image. Without trying to support ev
 
 ## Environment Variables
 
-The PostgreSQL image uses several environment variables which are easy to miss. While none of the variables are required, they may significantly aid you in using the image.
+The PostgreSQL image uses several environment variables which are easy to miss. The only variable required is `POSTGRES_PASSWORD`, the rest are optional.
 
 **Warning**: the Docker specific variables will only have an effect if you start the container with a data directory that is empty; any pre-existing database will be left untouched on container startup.
 
 ### `POSTGRES_PASSWORD`
 
-This environment variable is recommended for you to use the PostgreSQL image. This environment variable sets the superuser password for PostgreSQL. The default superuser is defined by the `POSTGRES_USER` environment variable.
+This environment variable is required for you to use the PostgreSQL image. It must not be empty or undefined. This environment variable sets the superuser password for PostgreSQL. The default superuser is defined by the `POSTGRES_USER` environment variable.
 
-Note 1: The PostgreSQL image sets up `trust` authentication locally so you may notice a password is not required when connecting from `localhost` (inside the same container). However, a password will be required if connecting from a different host/container.
+**Note 1:** The PostgreSQL image sets up `trust` authentication locally so you may notice a password is not required when connecting from `localhost` (inside the same container). However, a password will be required if connecting from a different host/container.
 
-Note 2: This variable defines the superuser password in the PostgreSQL instance, as set by the `initdb` script during inital container startup. It has no effect on the `PGPASSWORD` environment variable that may be used by the `psql` client at runtime, as described at [https://www.postgresql.org/docs/10/static/libpq-envars.html](https://www.postgresql.org/docs/10/static/libpq-envars.html). `PGPASSWORD`, if used, will be specified as a separate environment variable.
+**Note 2:** This variable defines the superuser password in the PostgreSQL instance, as set by the `initdb` script during initial container startup. It has no effect on the `PGPASSWORD` environment variable that may be used by the `psql` client at runtime, as described at [https://www.postgresql.org/docs/current/libpq-envars.html](https://www.postgresql.org/docs/current/libpq-envars.html). `PGPASSWORD`, if used, will be specified as a separate environment variable.
 
 ### `POSTGRES_USER`
 
 This optional environment variable is used in conjunction with `POSTGRES_PASSWORD` to set a user and its password. This variable will create the specified user with superuser power and a database with the same name. If it is not specified, then the default user of `postgres` will be used.
+
+Be aware that if this parameter is specified, PostgreSQL will still show `The files belonging to this database system will be owned by user "postgres"` during initialization. This refers to the Linux system user (from `/etc/passwd` in the image) that the `postgres` daemon runs as, and as such is unrelated to the `POSTGRES_USER` option. See the section titled "Arbitrary `--user` Notes" for more details.
 
 ### `POSTGRES_DB`
 
@@ -156,9 +160,36 @@ This optional environment variable can be used to define another location for th
 
 **Note:** on PostgreSQL 9.x, this variable is `POSTGRES_INITDB_XLOGDIR` (reflecting [the changed name of the `--xlogdir` flag to `--waldir` in PostgreSQL 10+](https://wiki.postgresql.org/wiki/New_in_postgres_10#Renaming_of_.22xlog.22_to_.22wal.22_Globally_.28and_location.2Flsn.29)).
 
+### `POSTGRES_HOST_AUTH_METHOD`
+
+This optional variable can be used to control the `auth-method` for `host` connections for `all` databases, `all` users, and `all` addresses. If unspecified then [`md5` password authentication](https://www.postgresql.org/docs/current/auth-password.html) is used. On an uninitialized database, this will populate `pg_hba.conf` via this approximate line:
+
+```console
+echo "host all all all $POSTGRES_HOST_AUTH_METHOD" >> pg_hba.conf
+```
+
+See the PostgreSQL documentation on [`pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) for more information about possible values and their meanings.
+
+**Note 1:** It is not recommended to use [`trust`](https://www.postgresql.org/docs/current/auth-trust.html) since it allows anyone to connect without a password, even if one is set (like via `POSTGRES_PASSWORD`). For more information see the PostgreSQL documentation on [*Trust Authentication*](https://www.postgresql.org/docs/current/auth-trust.html).
+
+**Note 2:** If you set `POSTGRES_HOST_AUTH_METHOD` to `trust`, then `POSTGRES_PASSWORD` is not required.
+
+**Note 3:** If you set this to an alternative value (such as `scram-sha-256`), you might need additional `POSTGRES_INITDB_ARGS` for the database to initialize correctly (such as `POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256`).
+
 ### `PGDATA`
 
-This optional variable can be used to define another location - like a subdirectory - for the database files. The default is `/var/lib/postgresql/data`, but if the data volume you're using is a filesystem mountpoint (like with GCE persistent disks), Postgres `initdb` recommends a subdirectory (for example `/var/lib/postgresql/data/pgdata` ) be created to contain the data.
+This optional variable can be used to define another location - like a subdirectory - for the database files. The default is `/var/lib/postgresql/data`. If the data volume you're using is a filesystem mountpoint (like with GCE persistent disks) or remote folder that cannot be chowned to the `postgres` user (like some NFS mounts), Postgres `initdb` recommends a subdirectory be created to contain the data.
+
+For example:
+
+```console
+$ docker run -d \
+	--name some-postgres \
+	-e POSTGRES_PASSWORD=mysecretpassword \
+	-e PGDATA=/var/lib/postgresql/data/pgdata \
+	-v /custom/mount:/var/lib/postgresql/data \
+	postgres
+```
 
 This is an environment variable that is not Docker specific. Because the variable is used by the `postgres` server binary (see the [PostgreSQL docs](https://www.postgresql.org/docs/11/app-postgres.html#id-1.9.5.14.7)), the entrypoint script takes it into account.
 
@@ -210,18 +241,18 @@ There are many ways to set PostgreSQL server configuration. For information on w
 	$ # customize the config
 
 	$ # run postgres with custom config
-	$ docker run -d --name some-postgres -v "$PWD/my-postgres.conf":/etc/postgresql/postgresql.conf postgres -c 'config_file=/etc/postgresql/postgresql.conf'
+	$ docker run -d --name some-postgres -v "$PWD/my-postgres.conf":/etc/postgresql/postgresql.conf -e POSTGRES_PASSWORD=mysecretpassword postgres -c 'config_file=/etc/postgresql/postgresql.conf'
 	```
 
 -	Set options directly on the run line. The entrypoint script is made so that any options passed to the docker command will be passed along to the `postgres` server daemon. From the [docs](https://www.postgresql.org/docs/current/static/app-postgres.html) we see that any option available in a `.conf` file can be set via `-c`.
 
 	```console
-	$ docker run -d --name some-postgres postgres -c 'shared_buffers=256MB' -c 'max_connections=200'
+	$ docker run -d --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres -c shared_buffers=256MB -c max_connections=200
 	```
 
 ## Locale Customization
 
-You can extend the image with a simple `Dockerfile` to set a different locale. The following example will set the default locale to `de_DE.utf8`:
+You can extend the Debian-based images with a simple `Dockerfile` to set a different locale. The following example will set the default locale to `de_DE.utf8`:
 
 ```dockerfile
 FROM postgres:9.4
@@ -231,11 +262,13 @@ ENV LANG de_DE.utf8
 
 Since database initialization only happens on container startup, this allows us to set the language before it is created.
 
+Also of note, Alpine-based variants do *not* support locales; see ["Character sets and locale" in the musl documentation](https://wiki.musl-libc.org/functional-differences-from-glibc.html#Character-sets-and-locale) for more details.
+
 ## Additional Extensions
 
-When using the default (Debian-based) variants, installing additional extensions (such as PostGIS) should be as simple as installing the relevant packages (see [github.com/appropriate/docker-postgis](https://github.com/appropriate/docker-postgis/blob/f6d28e4a1871b1f72e1c893ff103f10b6d7cb6e1/10-2.4/Dockerfile) for a concrete example).
+When using the default (Debian-based) variants, installing additional extensions (such as PostGIS) should be as simple as installing the relevant packages (see [github.com/postgis/docker-postgis](https://github.com/postgis/docker-postgis/blob/4eb614133d6aa87bfc5c952d24b7eb1f499e5c7c/12-3.0/Dockerfile) for a concrete example).
 
-When using the Alpine variants, any postgres extension not listed in [postgres-contrib](https://www.postgresql.org/docs/10/static/contrib.html) will need to be compiled in your own image (again, see [github.com/appropriate/docker-postgis](https://github.com/appropriate/docker-postgis/blob/f6d28e4a1871b1f72e1c893ff103f10b6d7cb6e1/10-2.4/alpine/Dockerfile) for a concrete example).
+When using the Alpine variants, any postgres extension not listed in [postgres-contrib](https://www.postgresql.org/docs/10/static/contrib.html) will need to be compiled in your own image (again, see [github.com/postgis/docker-postgis](https://github.com/postgis/docker-postgis/blob/4eb614133d6aa87bfc5c952d24b7eb1f499e5c7c/12-3.0/alpine/Dockerfile) for a concrete example).
 
 # Arbitrary `--user` Notes
 
@@ -244,11 +277,11 @@ As of [docker-library/postgres#253](https://github.com/docker-library/postgres/p
 The main caveat to note is that `postgres` doesn't care what UID it runs as (as long as the owner of `/var/lib/postgresql/data` matches), but `initdb` *does* care (and needs the user to exist in `/etc/passwd`):
 
 ```console
-$ docker run -it --rm --user www-data postgres
+$ docker run -it --rm --user www-data -e POSTGRES_PASSWORD=mysecretpassword postgres
 The files belonging to this database system will be owned by user "www-data".
 ...
 
-$ docker run -it --rm --user 1000:1000 postgres
+$ docker run -it --rm --user 1000:1000 -e POSTGRES_PASSWORD=mysecretpassword postgres
 initdb: could not look up effective user ID 1000: user does not exist
 ```
 
@@ -259,7 +292,7 @@ The three easiest ways to get around this:
 2.	bind-mount `/etc/passwd` read-only from the host (if the UID you desire is a valid user on your host):
 
 	```console
-	$ docker run -it --rm --user "$(id -u):$(id -g)" -v /etc/passwd:/etc/passwd:ro postgres
+	$ docker run -it --rm --user "$(id -u):$(id -g)" -v /etc/passwd:/etc/passwd:ro -e POSTGRES_PASSWORD=mysecretpassword postgres
 	The files belonging to this database system will be owned by user "jsmith".
 	...
 	```
@@ -268,7 +301,7 @@ The three easiest ways to get around this:
 
 	```console
 	$ docker volume create pgdata
-	$ docker run -it --rm -v pgdata:/var/lib/postgresql/data postgres
+	$ docker run -it --rm -v pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword postgres
 	The files belonging to this database system will be owned by user "postgres".
 	...
 	( once it's finished initializing successfully and is waiting for connections, stop it )
@@ -290,7 +323,7 @@ See ["IPVS connection timeout issue" in the Docker Success Center](https://succe
 
 ## Where to Store Data
 
-Important note: There are several ways to store data used by applications that run in Docker containers. We encourage users of the `postgres` images to familiarize themselves with the options available, including:
+**Important note:** There are several ways to store data used by applications that run in Docker containers. We encourage users of the `postgres` images to familiarize themselves with the options available, including:
 
 -	Let Docker manage the storage of your database data [by writing the database files to disk on the host system using its own internal volume management](https://docs.docker.com/engine/tutorials/dockervolumes/#adding-a-data-volume). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
 -	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume). This places the database files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
@@ -301,7 +334,7 @@ The Docker documentation is a good starting point for understanding the differen
 2.	Start your `postgres` container like this:
 
 	```console
-	$ docker run --name some-postgres -v /my/own/datadir:/var/lib/postgresql/data -d postgres:tag
+	$ docker run --name some-postgres -v /my/own/datadir:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword -d postgres:tag
 	```
 
 The `-v /my/own/datadir:/var/lib/postgresql/data` part of the command mounts the `/my/own/datadir` directory from the underlying host system as `/var/lib/postgresql/data` inside the container, where PostgreSQL by default will write its data files.
@@ -316,9 +349,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `postgres:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

@@ -14,50 +14,51 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`2.7.0-preview2-buster`, `2.7-rc-buster`, `rc-buster`, `2.7.0-preview2`, `2.7-rc`, `rc`](https://github.com/docker-library/ruby/blob/1dd5c255325fa0d5c3761f5238bbe1a9f50e9596/2.7-rc/buster/Dockerfile)
--	[`2.7.0-preview2-slim-buster`, `2.7-rc-slim-buster`, `rc-slim-buster`, `2.7.0-preview2-slim`, `2.7-rc-slim`, `rc-slim`](https://github.com/docker-library/ruby/blob/1dd5c255325fa0d5c3761f5238bbe1a9f50e9596/2.7-rc/buster/slim/Dockerfile)
--	[`2.7.0-preview2-alpine3.10`, `2.7-rc-alpine3.10`, `rc-alpine3.10`, `2.7.0-preview2-alpine`, `2.7-rc-alpine`, `rc-alpine`](https://github.com/docker-library/ruby/blob/1dd5c255325fa0d5c3761f5238bbe1a9f50e9596/2.7-rc/alpine3.10/Dockerfile)
--	[`2.6.5-buster`, `2.6-buster`, `2-buster`, `buster`, `2.6.5`, `2.6`, `2`, `latest`](https://github.com/docker-library/ruby/blob/5c9e21cbf79b7f36d505555c9ecd62cf0f7e07f8/2.6/buster/Dockerfile)
--	[`2.6.5-slim-buster`, `2.6-slim-buster`, `2-slim-buster`, `slim-buster`, `2.6.5-slim`, `2.6-slim`, `2-slim`, `slim`](https://github.com/docker-library/ruby/blob/8565a59602d3a95f5e858eb758aba0dcd6fce007/2.6/buster/slim/Dockerfile)
--	[`2.6.5-stretch`, `2.6-stretch`, `2-stretch`, `stretch`](https://github.com/docker-library/ruby/blob/5c9e21cbf79b7f36d505555c9ecd62cf0f7e07f8/2.6/stretch/Dockerfile)
--	[`2.6.5-slim-stretch`, `2.6-slim-stretch`, `2-slim-stretch`, `slim-stretch`](https://github.com/docker-library/ruby/blob/8565a59602d3a95f5e858eb758aba0dcd6fce007/2.6/stretch/slim/Dockerfile)
--	[`2.6.5-alpine3.10`, `2.6-alpine3.10`, `2-alpine3.10`, `alpine3.10`, `2.6.5-alpine`, `2.6-alpine`, `2-alpine`, `alpine`](https://github.com/docker-library/ruby/blob/5c9e21cbf79b7f36d505555c9ecd62cf0f7e07f8/2.6/alpine3.10/Dockerfile)
--	[`2.6.5-alpine3.9`, `2.6-alpine3.9`, `2-alpine3.9`, `alpine3.9`](https://github.com/docker-library/ruby/blob/5c9e21cbf79b7f36d505555c9ecd62cf0f7e07f8/2.6/alpine3.9/Dockerfile)
--	[`2.5.7-buster`, `2.5-buster`, `2.5.7`, `2.5`](https://github.com/docker-library/ruby/blob/bf0e16e7511c97fdf351fdfc2e7e17478a4eaf16/2.5/buster/Dockerfile)
--	[`2.5.7-slim-buster`, `2.5-slim-buster`, `2.5.7-slim`, `2.5-slim`](https://github.com/docker-library/ruby/blob/21c98da485e331cdc2518e80ff91e48335041dec/2.5/buster/slim/Dockerfile)
--	[`2.5.7-stretch`, `2.5-stretch`](https://github.com/docker-library/ruby/blob/bf0e16e7511c97fdf351fdfc2e7e17478a4eaf16/2.5/stretch/Dockerfile)
--	[`2.5.7-slim-stretch`, `2.5-slim-stretch`](https://github.com/docker-library/ruby/blob/21c98da485e331cdc2518e80ff91e48335041dec/2.5/stretch/slim/Dockerfile)
--	[`2.5.7-alpine3.10`, `2.5-alpine3.10`, `2.5.7-alpine`, `2.5-alpine`](https://github.com/docker-library/ruby/blob/bf0e16e7511c97fdf351fdfc2e7e17478a4eaf16/2.5/alpine3.10/Dockerfile)
--	[`2.5.7-alpine3.9`, `2.5-alpine3.9`](https://github.com/docker-library/ruby/blob/bf0e16e7511c97fdf351fdfc2e7e17478a4eaf16/2.5/alpine3.9/Dockerfile)
--	[`2.4.9-buster`, `2.4-buster`, `2.4.9`, `2.4`](https://github.com/docker-library/ruby/blob/924602dc917e27f8af6b35f838d11e7f3f39b2dc/2.4/buster/Dockerfile)
--	[`2.4.9-slim-buster`, `2.4-slim-buster`, `2.4.9-slim`, `2.4-slim`](https://github.com/docker-library/ruby/blob/924602dc917e27f8af6b35f838d11e7f3f39b2dc/2.4/buster/slim/Dockerfile)
--	[`2.4.9-stretch`, `2.4-stretch`](https://github.com/docker-library/ruby/blob/924602dc917e27f8af6b35f838d11e7f3f39b2dc/2.4/stretch/Dockerfile)
--	[`2.4.9-slim-stretch`, `2.4-slim-stretch`](https://github.com/docker-library/ruby/blob/924602dc917e27f8af6b35f838d11e7f3f39b2dc/2.4/stretch/slim/Dockerfile)
--	[`2.4.9-alpine3.10`, `2.4-alpine3.10`, `2.4.9-alpine`, `2.4-alpine`](https://github.com/docker-library/ruby/blob/924602dc917e27f8af6b35f838d11e7f3f39b2dc/2.4/alpine3.10/Dockerfile)
--	[`2.4.9-alpine3.9`, `2.4-alpine3.9`](https://github.com/docker-library/ruby/blob/924602dc917e27f8af6b35f838d11e7f3f39b2dc/2.4/alpine3.9/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/ruby/issues](https://github.com/docker-library/ruby/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/ruby)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`3.0.0-buster`, `3.0-buster`, `3-buster`, `buster`, `3.0.0`, `3.0`, `3`, `latest`](https://github.com/docker-library/ruby/blob/921f2e68671461785e822aa437b68433278263b9/3.0/buster/Dockerfile)
+-	[`3.0.0-slim-buster`, `3.0-slim-buster`, `3-slim-buster`, `slim-buster`, `3.0.0-slim`, `3.0-slim`, `3-slim`, `slim`](https://github.com/docker-library/ruby/blob/921f2e68671461785e822aa437b68433278263b9/3.0/buster/slim/Dockerfile)
+-	[`3.0.0-alpine3.13`, `3.0-alpine3.13`, `3-alpine3.13`, `alpine3.13`, `3.0.0-alpine`, `3.0-alpine`, `3-alpine`, `alpine`](https://github.com/docker-library/ruby/blob/8ec0fe3a4d9bf9243a2b3247927169c139d5a1a1/3.0/alpine3.13/Dockerfile)
+-	[`3.0.0-alpine3.12`, `3.0-alpine3.12`, `3-alpine3.12`, `alpine3.12`](https://github.com/docker-library/ruby/blob/921f2e68671461785e822aa437b68433278263b9/3.0/alpine3.12/Dockerfile)
+-	[`2.7.2-buster`, `2.7-buster`, `2-buster`, `2.7.2`, `2.7`, `2`](https://github.com/docker-library/ruby/blob/5a4e2d8d9fae6681ac3e2344eac547f0e2cdc598/2.7/buster/Dockerfile)
+-	[`2.7.2-slim-buster`, `2.7-slim-buster`, `2-slim-buster`, `2.7.2-slim`, `2.7-slim`, `2-slim`](https://github.com/docker-library/ruby/blob/5a4e2d8d9fae6681ac3e2344eac547f0e2cdc598/2.7/buster/slim/Dockerfile)
+-	[`2.7.2-alpine3.13`, `2.7-alpine3.13`, `2-alpine3.13`, `2.7.2-alpine`, `2.7-alpine`, `2-alpine`](https://github.com/docker-library/ruby/blob/8ec0fe3a4d9bf9243a2b3247927169c139d5a1a1/2.7/alpine3.13/Dockerfile)
+-	[`2.7.2-alpine3.12`, `2.7-alpine3.12`, `2-alpine3.12`](https://github.com/docker-library/ruby/blob/5a4e2d8d9fae6681ac3e2344eac547f0e2cdc598/2.7/alpine3.12/Dockerfile)
+-	[`2.6.6-buster`, `2.6-buster`, `2.6.6`, `2.6`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.6/buster/Dockerfile)
+-	[`2.6.6-slim-buster`, `2.6-slim-buster`, `2.6.6-slim`, `2.6-slim`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.6/buster/slim/Dockerfile)
+-	[`2.6.6-stretch`, `2.6-stretch`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.6/stretch/Dockerfile)
+-	[`2.6.6-slim-stretch`, `2.6-slim-stretch`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.6/stretch/slim/Dockerfile)
+-	[`2.6.6-alpine3.13`, `2.6-alpine3.13`, `2.6.6-alpine`, `2.6-alpine`](https://github.com/docker-library/ruby/blob/8ec0fe3a4d9bf9243a2b3247927169c139d5a1a1/2.6/alpine3.13/Dockerfile)
+-	[`2.6.6-alpine3.12`, `2.6-alpine3.12`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.6/alpine3.12/Dockerfile)
+-	[`2.5.8-buster`, `2.5-buster`, `2.5.8`, `2.5`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.5/buster/Dockerfile)
+-	[`2.5.8-slim-buster`, `2.5-slim-buster`, `2.5.8-slim`, `2.5-slim`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.5/buster/slim/Dockerfile)
+-	[`2.5.8-stretch`, `2.5-stretch`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.5/stretch/Dockerfile)
+-	[`2.5.8-slim-stretch`, `2.5-slim-stretch`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.5/stretch/slim/Dockerfile)
+-	[`2.5.8-alpine3.13`, `2.5-alpine3.13`, `2.5.8-alpine`, `2.5-alpine`](https://github.com/docker-library/ruby/blob/8ec0fe3a4d9bf9243a2b3247927169c139d5a1a1/2.5/alpine3.13/Dockerfile)
+-	[`2.5.8-alpine3.12`, `2.5-alpine3.12`](https://github.com/docker-library/ruby/blob/8e49e25b591d4cfa6324b6dada4f16629a1e51ce/2.5/alpine3.12/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/ruby/issues](https://github.com/docker-library/ruby/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/ruby/), [`arm32v5`](https://hub.docker.com/r/arm32v5/ruby/), [`arm32v6`](https://hub.docker.com/r/arm32v6/ruby/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ruby/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ruby/), [`i386`](https://hub.docker.com/r/i386/ruby/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ruby/), [`s390x`](https://hub.docker.com/r/s390x/ruby/)
+	[`amd64`](https://hub.docker.com/r/amd64/ruby/), [`arm32v5`](https://hub.docker.com/r/arm32v5/ruby/), [`arm32v6`](https://hub.docker.com/r/arm32v6/ruby/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ruby/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ruby/), [`i386`](https://hub.docker.com/r/i386/ruby/), [`mips64le`](https://hub.docker.com/r/mips64le/ruby/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ruby/), [`s390x`](https://hub.docker.com/r/s390x/ruby/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/ruby/` directory](https://github.com/docker-library/repo-info/blob/master/repos/ruby) ([history](https://github.com/docker-library/repo-info/commits/master/repos/ruby))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/ruby`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fruby)  
+	[official-images repo's `library/ruby` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fruby)  
 	[official-images repo's `library/ruby` file](https://github.com/docker-library/official-images/blob/master/library/ruby) ([history](https://github.com/docker-library/official-images/commits/master/library/ruby))
 
 -	**Source of this description**:  
@@ -146,9 +147,9 @@ This image does not contain the common packages contained in the default tag and
 
 ## `ruby:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

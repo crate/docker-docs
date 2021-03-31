@@ -14,21 +14,30 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8`, `8u232`, `8-al2-full`, `latest`](https://github.com/corretto/corretto-8-docker/blob/36e50e6fec65b3b12fa4e595e8b8fa1def0b39f5/Dockerfile)
--	[`11`, `11.0.5`, `11-al2-full`](https://github.com/corretto/corretto-11-docker/blob/8a8fdf18ac8700a98bf8995cc85ec70616e5e130/Dockerfile)
-
 # Quick reference
 
+-	**Maintained by**:  
+	[the AWS JDK team](https://github.com/corretto/corretto-docker)
+
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`8`, `8u282`, `8u282-al2`, `8-al2-full`, `8-al2-jdk`, `latest`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/8/jdk/al2/Dockerfile)
+-	[`11`, `11.0.10`, `11.0.10-al2`, `11-al2-jdk`, `11-al2-full`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/11/jdk/al2/Dockerfile)
+-	[`8-alpine`, `8u282-alpine`, `8-alpine-full`, `8-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/8/jdk/alpine/Dockerfile)
+-	[`8-alpine-jre`, `8u282-alpine-jre`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/8/jre/alpine/Dockerfile)
+-	[`11-alpine`, `11.0.10-alpine`, `11-alpine-full`, `11-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/11/jdk/alpine/Dockerfile)
+-	[`15`, `15.0.2`, `15.0.2-al2`, `15-al2-jdk`, `15-al2-full`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/15/jdk/al2/Dockerfile)
+-	[`15-alpine`, `15.0.2-alpine`, `15-alpine-full`, `15-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/15/jdk/alpine/Dockerfile)
+-	[`16`, `16.0.0`, `16.0.0-al2`, `16-al2-jdk`, `16-al2-full`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/16/jdk/al2/Dockerfile)
+-	[`16-alpine`, `16.0.0-alpine`, `16-alpine-full`, `16-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/24e4faf0038a6efcda97b9f4b3bf972a7ea839bd/16/jdk/alpine/Dockerfile)
+
+# Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/corretto/corretto-8-docker/issues](https://github.com/corretto/corretto-8-docker/issues)
-
--	**Maintained by**:  
-	[the AWS JDK team](https://github.com/corretto/corretto-8-docker)
+	[https://github.com/corretto/corretto-docker/issues](https://github.com/corretto/corretto-docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/amazoncorretto/), [`arm64v8`](https://hub.docker.com/r/arm64v8/amazoncorretto/)
@@ -38,7 +47,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/amazoncorretto`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Famazoncorretto)  
+	[official-images repo's `library/amazoncorretto` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Famazoncorretto)  
 	[official-images repo's `library/amazoncorretto` file](https://github.com/docker-library/official-images/blob/master/library/amazoncorretto) ([history](https://github.com/docker-library/official-images/commits/master/library/amazoncorretto))
 
 -	**Source of this description**:  
@@ -73,6 +82,22 @@ Amazon will provide security updates for Corretto 8 until at least June 2023. Up
 ### Can I use Corretto as a drop-in replacement for other JDKs?
 
 Corretto is designed as a drop-in replacement for all Java SE distributions unless you are using features (e.g., Java Flight Recorder) not available in OpenJDK. Once Corretto binaries are installed on a host and correctly invoked to run your Java applications (e.g., using the alternatives command on Linux), existing command-line options, tuning parameters, monitoring, and anything else in place will continue to work as before.
+
+# Image Variants
+
+The `amazoncorretto` images come in many flavors, each designed for a specific use case.
+
+## `amazoncorretto:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+## `amazoncorretto:<version>-alpine`
+
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

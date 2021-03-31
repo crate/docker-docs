@@ -14,20 +14,22 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`3.9`, `3.9.1`, `latest`](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/ef39847a374333c5de84d4cb730bbbc99dd9f18b/alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues)
 
 -	**Maintained by**:  
 	TeamSpeak Developers [nwerensteijn](https://github.com/nwerensteijn) and [muenchow](https://github.com/muenchow)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`3.13`, `3.13.3`, `latest`](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/5539fed973c4550e7f98bd0ca4ab80a67801ba33/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/teamspeak/)
@@ -37,7 +39,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/teamspeak`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fteamspeak)  
+	[official-images repo's `library/teamspeak` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fteamspeak)  
 	[official-images repo's `library/teamspeak` file](https://github.com/docker-library/official-images/blob/master/library/teamspeak) ([history](https://github.com/docker-library/official-images/commits/master/library/teamspeak))
 
 -	**Source of this description**:  

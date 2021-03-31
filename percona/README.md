@@ -14,26 +14,30 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8.0.16-7-centos`, `8.0-centos`, `8-centos`, `8.0.16-7`, `8.0`, `8`, `ps-8.0.16-7`, `ps-8.0`, `ps-8`](https://github.com/percona/percona-docker/blob/2e895190352332559d15e3847b82124e7fd0ed03/percona-server.80/Dockerfile)
--	[`5.7.26-centos`, `5.7-centos`, `5-centos`, `centos`, `5.7.26`, `5.7`, `5`, `ps-5.7.26`, `ps-5.7`, `ps-5`, `latest`](https://github.com/percona/percona-docker/blob/9749495eb09e8611ec0713d6fc404eaa0cfae1d4/percona-server.57/Dockerfile-dockerhub)
--	[`5.6.45-centos`, `5.6-centos`, `5.6.45`, `5.6`, `ps-5.6.45`, `ps-5.6`](https://github.com/percona/percona-docker/blob/eb40779081c84f00206d53b4d3d73aa76af458ef/percona-server.56/Dockerfile-dockerhub)
--	[`psmdb-4.0.10`, `psmdb-4.0`](https://github.com/percona/percona-docker/blob/ea1ee6f37e54593a829f282c623daefeeae0e7b6/percona-server-mongodb.40/Dockerfile)
--	[`psmdb-3.6.12`, `psmdb-3.6`](https://github.com/percona/percona-docker/blob/d1495383efaab7925dc3fd631386b068717d5738/percona-server-mongodb.36/Dockerfile)
-
 # Quick reference
 
+-	**Maintained by**:  
+	[Percona](https://github.com/percona/percona-docker)
+
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`8.0.22-13-centos`, `8.0-centos`, `8-centos`, `8.0.22-13`, `8.0`, `8`, `ps-8.0.22-13`, `ps-8.0`, `ps-8`](https://github.com/percona/percona-docker/blob/0a035c8a144cc12eb4d4f8bb45e01499b57e787c/percona-server-8.0/Dockerfile)
+-	[`5.7.33-centos`, `5.7-centos`, `5-centos`, `centos`, `5.7.33`, `5.7`, `5`, `ps-5.7.33`, `ps-5.7`, `ps-5`, `latest`](https://github.com/percona/percona-docker/blob/9551c99eb560904aa3ea8a69c1e7f7fff3554c2b/percona-server-5.7/Dockerfile-dockerhub)
+-	[`5.6.51-centos`, `5.6-centos`, `5.6.51`, `5.6`, `ps-5.6.51`, `ps-5.6`](https://github.com/percona/percona-docker/blob/f31a00a8b59ee17f9305403b109fd1eb50256493/percona-server-5.6/Dockerfile-dockerhub)
+-	[`psmdb-4.4.4`, `psmdb-4.4`](https://github.com/percona/percona-docker/blob/94082e0db0c0b4439386895f437ca73ac6926d29/percona-server-mongodb-4.4/Dockerfile)
+-	[`psmdb-4.2.12`, `psmdb-4.2`](https://github.com/percona/percona-docker/blob/f9384222b77d9c8b6f36820714715b1043362016/percona-server-mongodb-4.2/Dockerfile)
+-	[`psmdb-4.0.23`, `psmdb-4.0`](https://github.com/percona/percona-docker/blob/123ac8939a7d8cbf265fb8a122ff1fe469445d93/percona-server-mongodb-4.0/Dockerfile)
+-	[`psmdb-3.6.23`, `psmdb-3.6`](https://github.com/percona/percona-docker/blob/b32c7e632fe0d8b058ce32c0430a1783cfd557a0/percona-server-mongodb-3.6/Dockerfile)
+
+# Quick reference (cont.)
 
 -	**Where to file issues**:  
 	For issues with Percona Server: [Percona Server JIRA](https://jira.percona.com/issues/?jql=project+%3D+PS)
 
 	You will need to create an account if you do not have one.
-
--	**Maintained by**:  
-	[Percona](https://github.com/percona/percona-docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/percona/)
@@ -43,7 +47,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/percona`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fpercona)  
+	[official-images repo's `library/percona` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fpercona)  
 	[official-images repo's `library/percona` file](https://github.com/docker-library/official-images/blob/master/library/percona) ([history](https://github.com/docker-library/official-images/commits/master/library/percona))
 
 -	**Source of this description**:  
@@ -71,7 +75,7 @@ $ docker run --name some-percona -e MYSQL_ROOT_PASSWORD=my-secret-pw -d percona:
 
 ... where `some-percona` is the name you want to assign to your container, `my-secret-pw` is the password to be set for the MySQL root user and `tag` is the tag specifying the MySQL version you want. See the list above for relevant tags.
 
-## Connect to MariaDB from the MySQL command line client
+## Connect to Percona Server from the MySQL command line client
 
 The following command starts another `percona` container instance and runs the `mysql` command line client against your original `percona` container, allowing you to execute SQL statements against your database instance:
 

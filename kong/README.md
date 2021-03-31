@@ -14,31 +14,33 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.4.0-alpine`, `1.4.0`, `1.4`, `alpine`, `latest`](https://github.com/Kong/docker-kong/blob/3064639825d8f33fa84220993de49c5cfee5a3a9/alpine/Dockerfile)
--	[`1.4.0-ubuntu`, `1.4-ubuntu`, `ubuntu`](https://github.com/Kong/docker-kong/blob/3064639825d8f33fa84220993de49c5cfee5a3a9/ubuntu/Dockerfile)
--	[`1.4.0-centos`, `1.4-centos`, `centos`](https://github.com/Kong/docker-kong/blob/3064639825d8f33fa84220993de49c5cfee5a3a9/centos/Dockerfile)
--	[`1.3.0-alpine`, `1.3.0`, `1.3`](https://github.com/Kong/docker-kong/blob/c99d107b7c82d1f58e913d2d2c8ac4fad1ee62f0/alpine/Dockerfile)
--	[`1.3.0-ubuntu`, `1.3-ubuntu`](https://github.com/Kong/docker-kong/blob/c99d107b7c82d1f58e913d2d2c8ac4fad1ee62f0/ubuntu/Dockerfile)
--	[`1.3.0-centos`, `1.3-centos`](https://github.com/Kong/docker-kong/blob/c99d107b7c82d1f58e913d2d2c8ac4fad1ee62f0/centos/Dockerfile)
--	[`1.2.2-alpine`, `1.2.2`, `1.2`](https://github.com/Kong/docker-kong/blob/9a6d1a06b2e768949fda9ae7b30b747437fe388c/alpine/Dockerfile)
--	[`1.2.2-centos`, `1.2-centos`](https://github.com/Kong/docker-kong/blob/9a6d1a06b2e768949fda9ae7b30b747437fe388c/centos/Dockerfile)
--	[`1.1.3-alpine`, `1.1.3`, `1.1`](https://github.com/Kong/docker-kong/blob/196331b1e6b4798032af4d6c218a441e2c8db74d/alpine/Dockerfile)
--	[`1.1.3-centos`, `1.1-centos`](https://github.com/Kong/docker-kong/blob/196331b1e6b4798032af4d6c218a441e2c8db74d/centos/Dockerfile)
--	[`1.0.4-alpine`, `1.0.4`, `1.0`](https://github.com/Kong/docker-kong/blob/5a47f391b479e6660edab76813891326630bed0e/alpine/Dockerfile)
--	[`1.0.4-centos`, `1.0-centos`](https://github.com/Kong/docker-kong/blob/5a47f391b479e6660edab76813891326630bed0e/centos/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/kong/kong/issues](https://github.com/kong/kong/issues)
 
 -	**Maintained by**:  
 	[the Kong Docker Maintainers](https://github.com/kong/kong)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`2.3.3-alpine`, `2.3-alpine`, `2.3.3`, `2.3`, `2`, `alpine`, `latest`](https://github.com/Kong/docker-kong/blob/6a6944f5abb7bd2708a47f5571a5133ad976b343/alpine/Dockerfile)
+-	[`2.3.3-ubuntu`, `2.3-ubuntu`, `ubuntu`](https://github.com/Kong/docker-kong/blob/6a6944f5abb7bd2708a47f5571a5133ad976b343/ubuntu/Dockerfile)
+-	[`2.3.3-centos`, `2.3-centos`, `centos`](https://github.com/Kong/docker-kong/blob/6a6944f5abb7bd2708a47f5571a5133ad976b343/centos/Dockerfile)
+-	[`2.2.2-alpine`, `2.2-alpine`, `2.2.2`, `2.2`](https://github.com/Kong/docker-kong/blob/40f9973922b56ac590053b56f159bdce802e9296/alpine/Dockerfile)
+-	[`2.2.2-ubuntu`, `2.2-ubuntu`](https://github.com/Kong/docker-kong/blob/40f9973922b56ac590053b56f159bdce802e9296/ubuntu/Dockerfile)
+-	[`2.2.2-centos`, `2.2-centos`](https://github.com/Kong/docker-kong/blob/40f9973922b56ac590053b56f159bdce802e9296/centos/Dockerfile)
+-	[`2.1.4-alpine`, `2.1-alpine`, `2.1.4`, `2.1`](https://github.com/Kong/docker-kong/blob/b4c835f84d56a2d2d69c2780a1a409177ea0844f/alpine/Dockerfile)
+-	[`2.1.4-ubuntu`, `2.1-ubuntu`](https://github.com/Kong/docker-kong/blob/397f34af7d3503cc64614ef5852d5929a84ef65b/ubuntu/Dockerfile)
+-	[`2.1.4-centos`, `2.1-centos`](https://github.com/Kong/docker-kong/blob/397f34af7d3503cc64614ef5852d5929a84ef65b/centos/Dockerfile)
+-	[`2.0.5-alpine`, `2.0.5`, `2.0`](https://github.com/Kong/docker-kong/blob/60626098f2f32fe1528eb4ffacff13fd1c3e919f/alpine/Dockerfile)
+-	[`2.0.5-ubuntu`, `2.0-ubuntu`](https://github.com/Kong/docker-kong/blob/60626098f2f32fe1528eb4ffacff13fd1c3e919f/ubuntu/Dockerfile)
+-	[`2.0.5-centos`, `2.0-centos`](https://github.com/Kong/docker-kong/blob/60626098f2f32fe1528eb4ffacff13fd1c3e919f/centos/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/kong/kong/issues](https://github.com/kong/kong/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/kong/), [`arm64v8`](https://hub.docker.com/r/arm64v8/kong/)
@@ -48,7 +50,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/kong`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fkong)  
+	[official-images repo's `library/kong` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fkong)  
 	[official-images repo's `library/kong` file](https://github.com/docker-library/official-images/blob/master/library/kong) ([history](https://github.com/docker-library/official-images/commits/master/library/kong))
 
 -	**Source of this description**:  
@@ -56,15 +58,49 @@ WARNING:
 
 # What is Kong?
 
-Kong is a scalable, open source API Platform (also known as an API Gateway, or API Middleware, or Service Mesh for Microservices). Kong was originally built by [Kong Inc.](https://konghq.com) (formerly known as Mashape) to secure, manage and extend over 15,000 Microservices for its API Marketplace, which generates billions of requests per month.
+Kong is a scalable, open source API Platform (also known as an API Gateway or API Middleware). Kong was originally built by [Kong Inc.](https://konghq.com) (formerly known as Mashape) to secure, manage and extend over 15,000 Microservices for its API Marketplace, which generates billions of requests per month.
 
 Under active development, Kong is now used in production at hundreds of organizations from startups, to large enterprises and governments including: The New York Times, Expedia, Healthcare.gov, The Guardian, Condè Nast, The University of Auckland, Ferrari, Rakuten, Cisco, SkyScanner, Yahoo! Japan, Giphy and so on.
 
 Kong's official documentation can be found at [docs.konghq.com](https://docs.konghq.com/).
 
-# How to use this image
+# How to use this image without a Database
 
-First, Kong requires a running Cassandra cluster (3.x+) or PostgreSQL instance (9.6+) before it starts. You can either use the official Cassandra/PostgreSQL containers, or use your own.
+Kong 1.1 added the capability to run Kong without a database, using only in-memory storage for entities: we call this DB-less mode. When running Kong DB-less, the configuration of entities is done in a second configuration file, in YAML or JSON, using declarative configuration.
+
+```shell
+$ docker run -d --name kong \
+    -e "KONG_DATABASE=off" \
+    -e "KONG_PROXY_ACCESS_LOG=/dev/stdout" \
+    -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" \
+    -e "KONG_PROXY_ERROR_LOG=/dev/stderr" \
+    -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" \
+    -e "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl" \
+    -p 8000:8000 \
+    -p 8443:8443 \
+    -p 8001:8001 \
+    -p 8444:8444 \
+    kong
+```
+
+Generate a skeleton configuration file to get you started
+
+```shell
+$ docker exec -it kong kong config init /home/kong/kong.yml
+$ docker exec -it kong cat /home/kong/kong.yml >> kong.yml
+```
+
+Load a declarative configuration into a running Kong node via its Admin API using HTTPie
+
+```shell
+$ http :8001/config config=@kong.yml
+```
+
+**Note**: Not all Kong plugins are compatible with DB-less mode, since some of them by design require a central database coordination and/or dynamic creation of entities, see the doc for details at [DB-less and Declarative Configuration](https://docs.konghq.com/latest/db-less-and-declarative-config/)
+
+# How to use this image with a Database
+
+First, for fully-compatible with all plugins (e.g. acl, oauth2), Kong requires a running Cassandra cluster (3.x+) or PostgreSQL instance (9.6+) before it starts. You can either use the official Cassandra/PostgreSQL containers, or use your own.
 
 ## 1. Link Kong to either a Cassandra or PostgreSQL container
 
@@ -85,7 +121,7 @@ $ docker run -d --name kong-database \
 Start a PostgreSQL container by executing:
 
 ```shell
-docker run -d --name kong-database \
+$ docker run -d --name kong-database \
                 -p 5432:5432 \
                 -e "POSTGRES_USER=kong" \
                 -e "POSTGRES_DB=kong" \
@@ -97,7 +133,7 @@ docker run -d --name kong-database \
 Run the database migrations with an ephemeral Kong container:
 
 ```shell
-docker run --rm \
+$ docker run --rm \
     --link kong-database:kong-database \
     -e "KONG_DATABASE=postgres" \
     -e "KONG_PG_HOST=kong-database" \
@@ -168,13 +204,6 @@ This will run the [`kong reload`](https://docs.konghq.com/latest/cli/#reload) co
 
 Among the many deployment options [available](https://konghq.com/install), Kong also offers a [Kubernetes Ingress Controller](https://github.com/Kong/kubernetes-ingress-controller) ready to use in your K8S environment.
 
-# Service Mesh
-
-Since version 1.x you can run Kong in a Service Mesh deployment as a platform-agnostic sidecar proxy (including Kubernetes, but also on any other platform supported by Kong). To get started and learn more you can read the docs at:
-
--	[Streams and Service Mesh](https://docs.konghq.com/latest/streams-and-service-mesh/)
--	[Kubernetes and Service Mesh](https://github.com/Kong/kong-mesh-dist-kubernetes)
-
 # Image Variants
 
 The `kong` images come in many flavors, each designed for a specific use case.
@@ -185,9 +214,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `kong:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

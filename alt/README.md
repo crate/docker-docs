@@ -14,24 +14,26 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`p9`, `latest`](https://github.com/alt-cloud/docker-brew-alt/blob/e97e14b9ddc54efc0d8a2bee5af76d0ff7d90832/x86_64/Dockerfile)
--	[`p8`](https://github.com/alt-cloud/docker-brew-alt/blob/43865172eb9a97efa718af9cd5b5246db1657066/x86_64/Dockerfile)
--	[`sisyphus`](https://github.com/alt-cloud/docker-brew-alt/blob/06eb14171b57bbf157d646e2c4bef1f6f6d95187/x86_64/Dockerfile)
-
 # Quick reference
 
+-	**Maintained by**:  
+	[The ALT Linux Team Cloud](https://github.com/alt-cloud/docker-brew-alt)
+
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`p9`, `latest`](https://github.com/alt-cloud/docker-brew-alt/blob/027b02f57faf6278ab0a7080e077f4e989e0302d/x86_64/Dockerfile)
+-	[`p8`](https://github.com/alt-cloud/docker-brew-alt/blob/ce87cc6c704caf13461955cfa5ddd83a7d04207a/x86_64/Dockerfile)
+-	[`sisyphus`](https://github.com/alt-cloud/docker-brew-alt/blob/425b1b723bf933037319e23d5a5cdf7e796971eb/x86_64/Dockerfile)
+
+# Quick reference (cont.)
 
 -	**Where to file issues**:  
 	First of all, please, make sure that the developers are not aware of the [bug in ALT bugzilla](https://bugzilla.altlinux.org/buglist.cgi?query_format=advanced&product=Sisyphus&component=docker-ce).
 
 For create new bug, please use [ALT's bugzilla page](https://bugzilla.altlinux.org/enter_bug.cgi?product=Docker) (choose `Official image` as component and include details about image problems in the description) or [GitHub](https://github.com/alt-cloud/docker-brew-alt/issues).
-
--	**Maintained by**:  
-	[The ALT Linux Team Cloud](https://github.com/alt-cloud/docker-brew-alt)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/alt/), [`arm64v8`](https://hub.docker.com/r/arm64v8/alt/), [`i386`](https://hub.docker.com/r/i386/alt/), [`ppc64le`](https://hub.docker.com/r/ppc64le/alt/)
@@ -41,7 +43,7 @@ For create new bug, please use [ALT's bugzilla page](https://bugzilla.altlinux.o
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/alt`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Falt)  
+	[official-images repo's `library/alt` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Falt)  
 	[official-images repo's `library/alt` file](https://github.com/docker-library/official-images/blob/master/library/alt) ([history](https://github.com/docker-library/official-images/commits/master/library/alt))
 
 -	**Source of this description**:  

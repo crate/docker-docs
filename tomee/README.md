@@ -14,40 +14,36 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8-jre-1.7.5-jaxrs`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-1.7.5-jaxrs/Dockerfile)
--	[`8-jre-1.7.5-plume`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-1.7.5-plume/Dockerfile)
--	[`8-jre-1.7.5-plus`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-1.7.5-plus/Dockerfile)
--	[`8-jre-1.7.5-webprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-1.7.5-webprofile/Dockerfile)
--	[`8-jre-7.0.4-plume`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.4-plume/Dockerfile)
--	[`8-jre-7.0.4-plus`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.4-plus/Dockerfile)
--	[`8-jre-7.0.4-webprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.4-webprofile/Dockerfile)
--	[`8-jre-7.0.5-plume`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.5-plume/Dockerfile)
--	[`8-jre-7.0.5-plus`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.5-plus/Dockerfile)
--	[`8-jre-7.0.5-webprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.5-webprofile/Dockerfile)
--	[`8-jre-7.0.6-plume`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.6-plume/Dockerfile)
--	[`8-jre-7.0.6-plus`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.6-plus/Dockerfile)
--	[`8-jre-7.0.6-webprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.0.6-webprofile/Dockerfile)
--	[`8-jre-7.1.0-plume`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.1.0-plume/Dockerfile)
--	[`8-jre-7.1.0-plus`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.1.0-plus/Dockerfile)
--	[`8-jre-7.1.0-microprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.1.0-microprofile/Dockerfile)
--	[`8-jre-7.1.0-webprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/8-jre-7.1.0-webprofile/Dockerfile)
--	[`11-jre-8.0.0-M3-plume`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/11-jre-8.0.0-M3-plume/Dockerfile)
--	[`11-jre-8.0.0-M3-plus`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/11-jre-8.0.0-M3-plus/Dockerfile)
--	[`11-jre-8.0.0-M3-microprofile`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/11-jre-8.0.0-M3-microprofile/Dockerfile)
--	[`11-jre-8.0.0-M3-webprofile`, `latest`](https://github.com/tomitribe/docker-tomee/blob/fbe01211d21051406ffaae5bdf41d1f629caf58f/11-jre-8.0.0-M3-webprofile/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/tomitribe/docker-tomee/issues](https://github.com/tomitribe/docker-tomee/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/tomitribe/docker-tomee)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`8-jre-7.0.9-plume`, `7.0.9-plume`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.0/jre8/plume/Dockerfile)
+-	[`8-jre-7.0.9-plus`, `7.0.9-plus`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.0/jre8/plus/Dockerfile)
+-	[`8-jre-7.0.9-webprofile`, `7.0`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.0/jre8/webprofile/Dockerfile)
+-	[`8-jre-7.1.4-plume`, `7.1.4-plume`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.1/jre8/plume/Dockerfile)
+-	[`8-jre-7.1.4-plus`, `7.1.4-plus`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.1/jre8/plus/Dockerfile)
+-	[`8-jre-7.1.4-microprofile`, `7.1.4-microprofile`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.1/jre8/microprofile/Dockerfile)
+-	[`8-jre-7.1.4-webprofile`, `7.1.4-webprofile`, `7`, `7.1`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-7.1/jre8/webprofile/Dockerfile)
+-	[`8-jre-8.0.6-plume`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre8/plume/Dockerfile)
+-	[`8-jre-8.0.6-plus`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre8/plus/Dockerfile)
+-	[`8-jre-8.0.6-microprofile`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre8/microprofile/Dockerfile)
+-	[`8-jre-8.0.6-webprofile`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre8/webprofile/Dockerfile)
+-	[`11-jre-8.0.6-plume`, `8.0.6-plume`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre11/plume/Dockerfile)
+-	[`11-jre-8.0.6-plus`, `8.0.6-plus`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre11/plus/Dockerfile)
+-	[`11-jre-8.0.6-microprofile`, `8.0.6-microprofile`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre11/microprofile/Dockerfile)
+-	[`11-jre-8.0.6-webprofile`, `8.0.6-webprofile`, `latest`, `8`](https://github.com/tomitribe/docker-tomee/blob/e14a033bd167917f5fe7cff8909022489996aed3/TomEE-8.0/jre11/webprofile/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/tomitribe/docker-tomee/issues](https://github.com/tomitribe/docker-tomee/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/tomee/)
@@ -57,7 +53,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/tomee`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Ftomee)  
+	[official-images repo's `library/tomee` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Ftomee)  
 	[official-images repo's `library/tomee` file](https://github.com/docker-library/official-images/blob/master/library/tomee) ([history](https://github.com/docker-library/official-images/commits/master/library/tomee))
 
 -	**Source of this description**:  
@@ -65,7 +61,7 @@ WARNING:
 
 # What is TomEE?
 
-Apache TomEE, pronounced "Tommy", is an all-Apache Java EE Web Profile certified stack where Apache Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Apache Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.
+[Apache TomEE](http://tomee.apache.org/), pronounced "Tommy", is an all-Apache Java EE Web Profile certified stack where Apache Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Apache Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/4a10a52c08621b68c1b1b53b561f819d9e78c2e0/tomee/logo.png)
 
@@ -86,8 +82,8 @@ All of Tomitribe developers are committers of TomEE and are influencers of the p
 
 Below are some press releases that might be helpful:
 
--	Tomitribe Announces Enterprise Service Support for Apache TomEE http://www.tomitribe.com/company/press/tomitribe_enterprise_service_support_for_apache_tomee_javaone_2013/
--	Tomitribe Introduces Community Partnership Program Conference http://www.tomitribe.com/company/press/tomitribe-introduces-community-partnership-program-and-presents-java-ee-sessions-at-javaone-2014-conference/
+-	Tomitribe Announces [Enterprise Service Support for Apache TomEE](http://www.tomitribe.com/company/press/tomitribe_enterprise_service_support_for_apache_tomee_javaone_2013/)
+-	Tomitribe Introduces [Community Partnership Program Conference](http://www.tomitribe.com/company/press/tomitribe-introduces-community-partnership-program-and-presents-java-ee-sessions-at-javaone-2014-conference/)
 
 # Apache TomEE and ManageCat
 
@@ -95,7 +91,7 @@ Another commercial support company provides enterprise support for Apache TomEE 
 
 ManageCat is a cloud management and service platform for Apache Tomcat and Apache TomEE servers. Involving with a lot of Apache Java EE projects, we want to transfer not only our knowledge about Apache TomEE and also other Java EE technologies including JPA, EJB, CDI, JSF, JSTL, JTA, JMS. We will help our customers to develop and deploy their production based Java EE applications smoothly.
 
--	ManageCat Announces Enterprise Service Support for Apache Tomcat and TomEE, http://managecat.com/index.php/enterprise-tomcat-support
+-	ManageCat Announces [Enterprise Service Support for Apache Tomcat and TomEE](http://managecat.com/index.php/enterprise-tomcat-support)
 
 # How to use this image.
 

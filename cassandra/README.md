@@ -14,33 +14,36 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`2.1.21`, `2.1`](https://github.com/docker-library/cassandra/blob/f98d3fc5282a99cdfe1ec8aa808d6313080137c0/2.1/Dockerfile)
--	[`2.2.15`, `2.2`, `2`](https://github.com/docker-library/cassandra/blob/2852d6ace9623301bd831e38a6993a73f0a640a1/2.2/Dockerfile)
--	[`3.0.19`, `3.0`](https://github.com/docker-library/cassandra/blob/006818b41131828443e1e192a7ad94a84fe668b9/3.0/Dockerfile)
--	[`3.11.5`, `3.11`, `3`, `latest`](https://github.com/docker-library/cassandra/blob/e5b7ed497ff74587560682dd4c6a2e9b01f818d9/3.11/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/cassandra/issues](https://github.com/docker-library/cassandra/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/cassandra)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`4.0-beta4`, `4.0`](https://github.com/docker-library/cassandra/blob/4542823efa4a2b91575a65266906b1fe314f839d/4.0/Dockerfile)
+-	[`3.11.10`, `3.11`, `3`, `latest`](https://github.com/docker-library/cassandra/blob/5670b9eb72220c08446731a5aa39bbb1eaec0cbd/3.11/Dockerfile)
+-	[`3.0.24`, `3.0`](https://github.com/docker-library/cassandra/blob/ae74e95f49d635ad12af342bac020ac0453e356f/3.0/Dockerfile)
+-	[`2.2.19`, `2.2`, `2`](https://github.com/docker-library/cassandra/blob/4542823efa4a2b91575a65266906b1fe314f839d/2.2/Dockerfile)
+-	[`2.1.22`, `2.1`](https://github.com/docker-library/cassandra/blob/4542823efa4a2b91575a65266906b1fe314f839d/2.1/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/cassandra/issues](https://github.com/docker-library/cassandra/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`i386`](https://hub.docker.com/r/i386/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/)
+	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm32v7`](https://hub.docker.com/r/arm32v7/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/cassandra/` directory](https://github.com/docker-library/repo-info/blob/master/repos/cassandra) ([history](https://github.com/docker-library/repo-info/commits/master/repos/cassandra))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/cassandra`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fcassandra)  
+	[official-images repo's `library/cassandra` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fcassandra)  
 	[official-images repo's `library/cassandra` file](https://github.com/docker-library/official-images/blob/master/library/cassandra) ([history](https://github.com/docker-library/official-images/commits/master/library/cassandra))
 
 -	**Source of this description**:  
@@ -128,7 +131,7 @@ There are a small number of environment variables supported by the image which w
 
 -	`CASSANDRA_START_RPC`: This variable is for controlling if the thrift rpc server is started. It will set the [`start_rpc`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__start_rpc) option in `cassandra.yaml`.
 
--	`CASSANDRA_SEEDS`: This variable is the comma-separated list of IP addresses used by gossip for bootstrapping new nodes joining a cluster. It will set the `seeds` value of the [`seed_provider`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__seed_provider) option in `cassandra.yaml`. The `CASSANDRA_BROADCAST_ADDRESS` will be added the the seeds passed in so that the sever will talk to itself as well.
+-	`CASSANDRA_SEEDS`: This variable is the comma-separated list of IP addresses used by gossip for bootstrapping new nodes joining a cluster. It will set the `seeds` value of the [`seed_provider`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__seed_provider) option in `cassandra.yaml`. The `CASSANDRA_BROADCAST_ADDRESS` will be added the the seeds passed in so that the server will talk to itself as well.
 
 -	`CASSANDRA_CLUSTER_NAME`: This variable sets the name of the cluster and must be the same for all nodes in the cluster. It will set the [`cluster_name`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__cluster_name) option of `cassandra.yaml`.
 

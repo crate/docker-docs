@@ -14,25 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8.0`, `8`](https://github.com/oracle/container-images/blob/a5399bf87cefa2ea601e2e0de6e579c92beb805e/8.0/Dockerfile)
--	[`8-slim`](https://github.com/oracle/container-images/blob/a5399bf87cefa2ea601e2e0de6e579c92beb805e/8-slim/Dockerfile)
--	[`7.6`, `7`, `latest`](https://github.com/oracle/container-images/blob/a5399bf87cefa2ea601e2e0de6e579c92beb805e/7.6/Dockerfile)
--	[`7-slim`](https://github.com/oracle/container-images/blob/a5399bf87cefa2ea601e2e0de6e579c92beb805e/7-slim/Dockerfile)
--	[`6.10`, `6`](https://github.com/oracle/container-images/blob/a5399bf87cefa2ea601e2e0de6e579c92beb805e/6.10/Dockerfile)
--	[`6-slim`](https://github.com/oracle/container-images/blob/a5399bf87cefa2ea601e2e0de6e579c92beb805e/6-slim/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[the Oracle Linux Product Team](https://github.com/oracle/container-images)
 
 -	**Where to get help**:  
 	see the "Customer Support" and "Community Support" sections below
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`8.3`, `8`](https://github.com/oracle/container-images/blob/33f83bbf624a08724400ca4db1d1184cfb31fc3e/8/Dockerfile)
+-	[`8-slim`](https://github.com/oracle/container-images/blob/33f83bbf624a08724400ca4db1d1184cfb31fc3e/8-slim/Dockerfile)
+-	[`7.9`, `7`](https://github.com/oracle/container-images/blob/33f83bbf624a08724400ca4db1d1184cfb31fc3e/7/Dockerfile)
+-	[`7-slim`](https://github.com/oracle/container-images/blob/33f83bbf624a08724400ca4db1d1184cfb31fc3e/7-slim/Dockerfile)
+-	[`6.10`, `6`](https://github.com/oracle/container-images/blob/33f83bbf624a08724400ca4db1d1184cfb31fc3e/6/Dockerfile)
+-	[`6-slim`](https://github.com/oracle/container-images/blob/33f83bbf624a08724400ca4db1d1184cfb31fc3e/6-slim/Dockerfile)
+
+# Quick reference (cont.)
+
 -	**Where to file issues**:  
 	[https://github.com/oracle/container-images/issues](https://github.com/oracle/container-images/issues)
-
--	**Maintained by**:  
-	[the Oracle Linux Product Team](https://github.com/oracle/container-images)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/oraclelinux/), [`arm64v8`](https://hub.docker.com/r/arm64v8/oraclelinux/)
@@ -42,7 +44,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/oraclelinux`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Foraclelinux)  
+	[official-images repo's `library/oraclelinux` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Foraclelinux)  
 	[official-images repo's `library/oraclelinux` file](https://github.com/docker-library/official-images/blob/master/library/oraclelinux) ([history](https://github.com/docker-library/official-images/commits/master/library/oraclelinux))
 
 -	**Source of this description**:  
@@ -50,13 +52,17 @@ WARNING:
 
 # Oracle Linux
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/ac923d04bcfcf8de5128ab155ed9f1698374fdfc/oraclelinux/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/9d0bc984117a35c4236e09ba1c6f4b2b9f287773/oraclelinux/logo.png)
 
 Oracle Linux is an open-source operating system available under the GNU General Public License (GPLv2). Suitable for general purpose or Oracle workloads, it benefits from rigorous testing of more than 128,000 hours per day with real- world workloads and includes unique innovations such as Ksplice for zero- downtime kernel patching, DTrace for real-time diagnostics, the powerful Btrfs file system, and more.
 
 ## How to use these images
 
 The Oracle Linux images are intended for use in the **FROM** field of a downstream `Dockerfile`. For example, to use the latest optimized Oracle Linux 7 image, specify `FROM oraclelinux:7-slim`.
+
+## Removal of `latest` tag
+
+The `latest` tag was removed from the Oracle Linux official images in June 2020 to reduce confusion. Downstream images using `oraclelinux:latest` or no tag should be updated to `oraclelinux:7` for future builds. Note that Oracle recommends using the `-slim` variants for the smallest possible image size.
 
 ## Official Resources
 

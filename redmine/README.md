@@ -14,35 +14,37 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`4.0.5`, `4.0`, `4`, `latest`](https://github.com/docker-library/redmine/blob/4064a505db909322bda24823c200f4c97985d638/4.0/Dockerfile)
--	[`4.0.5-passenger`, `4.0-passenger`, `4-passenger`, `passenger`](https://github.com/docker-library/redmine/blob/fd5541e76d7f2230484c19a784b8f9ee884559ce/4.0/passenger/Dockerfile)
--	[`4.0.5-alpine`, `4.0-alpine`, `4-alpine`, `alpine`](https://github.com/docker-library/redmine/blob/4064a505db909322bda24823c200f4c97985d638/4.0/alpine/Dockerfile)
--	[`3.4.12`, `3.4`, `3`](https://github.com/docker-library/redmine/blob/ba9880cc3a224c7e5e15c1f9bf1757aa7c4c5b92/3.4/Dockerfile)
--	[`3.4.12-passenger`, `3.4-passenger`, `3-passenger`](https://github.com/docker-library/redmine/blob/fd5541e76d7f2230484c19a784b8f9ee884559ce/3.4/passenger/Dockerfile)
--	[`3.4.12-alpine`, `3.4-alpine`, `3-alpine`](https://github.com/docker-library/redmine/blob/ba9880cc3a224c7e5e15c1f9bf1757aa7c4c5b92/3.4/alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/redmine/issues](https://github.com/docker-library/redmine/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/redmine)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`4.1.2`, `4.1`, `4`, `latest`](https://github.com/docker-library/redmine/blob/ea093b382fbdb883daf868c5ea4a9c1fd27f3aca/4.1/Dockerfile)
+-	[`4.1.2-passenger`, `4.1-passenger`, `4-passenger`, `passenger`](https://github.com/docker-library/redmine/blob/7fdd6777cc21b0d1974884e6e54208d16a991b19/4.1/passenger/Dockerfile)
+-	[`4.1.2-alpine`, `4.1-alpine`, `4-alpine`, `alpine`](https://github.com/docker-library/redmine/blob/d93440fe33185a141fc6fbee809cd7cd886acf84/4.1/alpine/Dockerfile)
+-	[`4.0.8`, `4.0`](https://github.com/docker-library/redmine/blob/ae11c0c35e0920781464c4afdac9096eec355c8b/4.0/Dockerfile)
+-	[`4.0.8-passenger`, `4.0-passenger`](https://github.com/docker-library/redmine/blob/7fdd6777cc21b0d1974884e6e54208d16a991b19/4.0/passenger/Dockerfile)
+-	[`4.0.8-alpine`, `4.0-alpine`](https://github.com/docker-library/redmine/blob/d93440fe33185a141fc6fbee809cd7cd886acf84/4.0/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/redmine/issues](https://github.com/docker-library/redmine/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/redmine/), [`arm32v5`](https://hub.docker.com/r/arm32v5/redmine/), [`arm32v7`](https://hub.docker.com/r/arm32v7/redmine/), [`arm64v8`](https://hub.docker.com/r/arm64v8/redmine/), [`i386`](https://hub.docker.com/r/i386/redmine/), [`ppc64le`](https://hub.docker.com/r/ppc64le/redmine/), [`s390x`](https://hub.docker.com/r/s390x/redmine/)
+	[`amd64`](https://hub.docker.com/r/amd64/redmine/), [`arm32v5`](https://hub.docker.com/r/arm32v5/redmine/), [`arm32v7`](https://hub.docker.com/r/arm32v7/redmine/), [`arm64v8`](https://hub.docker.com/r/arm64v8/redmine/), [`i386`](https://hub.docker.com/r/i386/redmine/), [`mips64le`](https://hub.docker.com/r/mips64le/redmine/), [`ppc64le`](https://hub.docker.com/r/ppc64le/redmine/), [`s390x`](https://hub.docker.com/r/s390x/redmine/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/redmine/` directory](https://github.com/docker-library/repo-info/blob/master/repos/redmine) ([history](https://github.com/docker-library/repo-info/commits/master/repos/redmine))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/redmine`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fredmine)  
+	[official-images repo's `library/redmine` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fredmine)  
 	[official-images repo's `library/redmine` file](https://github.com/docker-library/official-images/blob/master/library/redmine) ([history](https://github.com/docker-library/official-images/commits/master/library/redmine))
 
 -	**Source of this description**:  
@@ -109,6 +111,7 @@ services:
     environment:
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: example
+      REDMINE_SECRET_KEY_BASE: supersecretkey
 
   db:
     image: mysql:5.7
@@ -118,7 +121,7 @@ services:
       MYSQL_DATABASE: redmine
 ```
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/e24f39cddf21560cf0a24f149059ff23640b0f16/redmine/stack.yml)
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/cd78c2e058c5a648c0ef42590943736612332666/redmine/stack.yml)
 
 Run `docker stack deploy -c stack.yml redmine` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
@@ -156,9 +159,9 @@ If you'd like to be able to access the instance from the host without the contai
 
 When you start the `redmine` image, you can adjust the configuration of the instance by passing one or more environment variables on the `docker run` command line.
 
-### `REDMINE_DB_MYSQL` or `REDMINE_DB_POSTGRES`
+### `REDMINE_DB_MYSQL`, `REDMINE_DB_POSTGRES`, or `REDMINE_DB_SQLSERVER`
 
-These two variables allow you to set the hostname or IP address of the MySQL or PostgreSQL host, respectively. These values are mutually exclusive so it is undefined behavior if both are set. If neither variable is set, the image will fall back to using SQLite.
+These variables allow you to set the hostname or IP address of the MySQL, PostgreSQL, or Microsoft SQL host, respectively. These values are mutually exclusive so it is undefined behavior if any two are set. If no variable is set, the image will fall back to using SQLite.
 
 ### `REDMINE_DB_PORT`
 
@@ -194,7 +197,23 @@ This variable allows you to control if `rake redmine:plugins:migrate` is run on 
 
 ### `REDMINE_SECRET_KEY_BASE`
 
-This variable is used to create an initial `config/secrets.yml` and set the `secret_key_base` value, which is "used by Rails to encode cookies storing session data thus preventing their tampering. Generating a new secret token invalidates all existing sessions after restart" ([session store](https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Step-5-Session-store-secret-generation)). If you do not set this variable or provide a `secrets.yml` one will be generated using `rake generate_secret_token`.
+This variable is required when using Docker Swarm replicas to maintain session connections when being loadbalanced between containers. It will create an initial `config/secrets.yml` and set the `secret_key_base` value, which is "used by Rails to encode cookies storing session data thus preventing their tampering. Generating a new secret token invalidates all existing sessions after restart" ([session store](https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Step-5-Session-store-secret-generation)). If you do not set this variable or provide a `secrets.yml` one will be generated using `rake generate_secret_token`.
+
+## Running as an arbitrary user
+
+For running Redmine without Phusion Passenger you can simply use the [`--user`](https://docs.docker.com/engine/reference/run/#user) flag to `docker run` and give it a `username:group` or `UID:GID`, the user doesn't need to exist in the container
+
+For running the `redmine:passenger` variant as an arbitrary user you will however need the user to exist in `/etc/passwd`. Here are a few examples for doing that:
+
+1.	Create the user on your host and mount `/etc/passwd:/etc/passwd:ro`
+
+2.	Create a Dockerfile `FROM redmine:passenger` and include something like [`RUN groupadd -r group && useradd --no-log-init -r -g group user`](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)
+
+	```dockerfile
+	FROM redmine:passenger
+	RUN groupadd -r group && useradd --no-log-init -r -g group user
+	USER user
+	```
 
 ## Docker Secrets
 
@@ -216,9 +235,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `redmine:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

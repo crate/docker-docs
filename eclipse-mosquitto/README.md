@@ -14,21 +14,26 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.6.7`, `1.6`, `latest`](https://github.com/eclipse/mosquitto/blob/eaab1799337ef33594d165b179d20b1c6305f9f3/docker/1.6/Dockerfile)
--	[`1.5.9`, `1.5`](https://github.com/eclipse/mosquitto/blob/eaab1799337ef33594d165b179d20b1c6305f9f3/docker/1.5/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/eclipse/mosquitto/issues](https://github.com/eclipse/mosquitto/issues)
 
 -	**Maintained by**:  
 	[the Eclipse Foundation](https://github.com/eclipse/mosquitto)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`2.0.9`, `2.0`, `2`, `latest`](https://github.com/eclipse/mosquitto/blob/9f21a43eeeafdbb998409d075b986df23c18e649/docker/2.0/Dockerfile)
+-	[`2.0.9-openssl`, `2.0-openssl`, `2-openssl`, `openssl`](https://github.com/eclipse/mosquitto/blob/9f21a43eeeafdbb998409d075b986df23c18e649/docker/2.0-openssl/Dockerfile)
+-	[`1.6.14`, `1.6`](https://github.com/eclipse/mosquitto/blob/9f21a43eeeafdbb998409d075b986df23c18e649/docker/1.6/Dockerfile)
+-	[`1.6.14-openssl`, `1.6-openssl`](https://github.com/eclipse/mosquitto/blob/9f21a43eeeafdbb998409d075b986df23c18e649/docker/1.6-openssl/Dockerfile)
+-	[`1.5.11`, `1.5`](https://github.com/eclipse/mosquitto/blob/9f21a43eeeafdbb998409d075b986df23c18e649/docker/1.5/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/eclipse/mosquitto/issues](https://github.com/eclipse/mosquitto/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/eclipse-mosquitto/), [`arm32v6`](https://hub.docker.com/r/arm32v6/eclipse-mosquitto/), [`arm64v8`](https://hub.docker.com/r/arm64v8/eclipse-mosquitto/), [`i386`](https://hub.docker.com/r/i386/eclipse-mosquitto/), [`ppc64le`](https://hub.docker.com/r/ppc64le/eclipse-mosquitto/), [`s390x`](https://hub.docker.com/r/s390x/eclipse-mosquitto/)
@@ -38,7 +43,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/eclipse-mosquitto`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Feclipse-mosquitto)  
+	[official-images repo's `library/eclipse-mosquitto` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Feclipse-mosquitto)  
 	[official-images repo's `library/eclipse-mosquitto` file](https://github.com/docker-library/official-images/blob/master/library/eclipse-mosquitto) ([history](https://github.com/docker-library/official-images/commits/master/library/eclipse-mosquitto))
 
 -	**Source of this description**:  

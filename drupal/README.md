@@ -14,38 +14,46 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8.7.8-apache`, `8.7-apache`, `8-apache`, `apache`, `8.7.8`, `8.7`, `8`, `latest`](https://github.com/docker-library/drupal/blob/47c6c3f965313a60930e0875867ef9e4cba46f73/8.7/apache/Dockerfile)
--	[`8.7.8-fpm`, `8.7-fpm`, `8-fpm`, `fpm`](https://github.com/docker-library/drupal/blob/47c6c3f965313a60930e0875867ef9e4cba46f73/8.7/fpm/Dockerfile)
--	[`8.7.8-fpm-alpine`, `8.7-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine`](https://github.com/docker-library/drupal/blob/47c6c3f965313a60930e0875867ef9e4cba46f73/8.7/fpm-alpine/Dockerfile)
--	[`8.6.17-apache`, `8.6-apache`, `8.6.17`, `8.6`](https://github.com/docker-library/drupal/blob/b05d762e4fa8ff852649ed6673c5653d9bb18401/8.6/apache/Dockerfile)
--	[`8.6.17-fpm`, `8.6-fpm`](https://github.com/docker-library/drupal/blob/b05d762e4fa8ff852649ed6673c5653d9bb18401/8.6/fpm/Dockerfile)
--	[`8.6.17-fpm-alpine`, `8.6-fpm-alpine`](https://github.com/docker-library/drupal/blob/f52125f5b83b26f488977abe9cfa8adb68a9f706/8.6/fpm-alpine/Dockerfile)
--	[`7.67-apache`, `7-apache`, `7.67`, `7`](https://github.com/docker-library/drupal/blob/b05d762e4fa8ff852649ed6673c5653d9bb18401/7/apache/Dockerfile)
--	[`7.67-fpm`, `7-fpm`](https://github.com/docker-library/drupal/blob/b05d762e4fa8ff852649ed6673c5653d9bb18401/7/fpm/Dockerfile)
--	[`7.67-fpm-alpine`, `7-fpm-alpine`](https://github.com/docker-library/drupal/blob/f52125f5b83b26f488977abe9cfa8adb68a9f706/7/fpm-alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/drupal/issues](https://github.com/docker-library/drupal/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/drupal) (*not* the Drupal Community or the Drupal Security Team)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`9.1.5-php8.0-apache-buster`, `9.1-php8.0-apache-buster`, `9-php8.0-apache-buster`, `php8.0-apache-buster`, `9.1.5-php8.0-apache`, `9.1-php8.0-apache`, `9-php8.0-apache`, `php8.0-apache`, `9.1.5-apache-buster`, `9.1-apache-buster`, `9-apache-buster`, `apache-buster`, `9.1.5-apache`, `9.1-apache`, `9-apache`, `apache`, `9.1.5`, `9.1`, `9`, `latest`, `9.1.5-php8.0`, `9.1-php8.0`, `9-php8.0`, `php8.0`](https://github.com/docker-library/drupal/blob/ffe1d40f37f93e122f43a0f45cd607eb6a98fe4c/9.1/php8.0/apache-buster/Dockerfile)
+-	[`9.1.5-php8.0-fpm-buster`, `9.1-php8.0-fpm-buster`, `9-php8.0-fpm-buster`, `php8.0-fpm-buster`, `9.1.5-php8.0-fpm`, `9.1-php8.0-fpm`, `9-php8.0-fpm`, `php8.0-fpm`, `9.1.5-fpm-buster`, `9.1-fpm-buster`, `9-fpm-buster`, `fpm-buster`, `9.1.5-fpm`, `9.1-fpm`, `9-fpm`, `fpm`](https://github.com/docker-library/drupal/blob/ffe1d40f37f93e122f43a0f45cd607eb6a98fe4c/9.1/php8.0/fpm-buster/Dockerfile)
+-	[`9.1.5-php8.0-fpm-alpine3.12`, `9.1-php8.0-fpm-alpine3.12`, `9-php8.0-fpm-alpine3.12`, `php8.0-fpm-alpine3.12`, `9.1.5-php8.0-fpm-alpine`, `9.1-php8.0-fpm-alpine`, `9-php8.0-fpm-alpine`, `php8.0-fpm-alpine`, `9.1.5-fpm-alpine3.12`, `9.1-fpm-alpine3.12`, `9-fpm-alpine3.12`, `fpm-alpine3.12`, `9.1.5-fpm-alpine`, `9.1-fpm-alpine`, `9-fpm-alpine`, `fpm-alpine`](https://github.com/docker-library/drupal/blob/ffe1d40f37f93e122f43a0f45cd607eb6a98fe4c/9.1/php8.0/fpm-alpine3.12/Dockerfile)
+-	[`9.1.5-php7.4-apache-buster`, `9.1-php7.4-apache-buster`, `9-php7.4-apache-buster`, `php7.4-apache-buster`, `9.1.5-php7.4-apache`, `9.1-php7.4-apache`, `9-php7.4-apache`, `php7.4-apache`](https://github.com/docker-library/drupal/blob/ffe1d40f37f93e122f43a0f45cd607eb6a98fe4c/9.1/php7.4/apache-buster/Dockerfile)
+-	[`9.1.5-php7.4-fpm-buster`, `9.1-php7.4-fpm-buster`, `9-php7.4-fpm-buster`, `php7.4-fpm-buster`, `9.1.5-php7.4-fpm`, `9.1-php7.4-fpm`, `9-php7.4-fpm`, `php7.4-fpm`](https://github.com/docker-library/drupal/blob/ffe1d40f37f93e122f43a0f45cd607eb6a98fe4c/9.1/php7.4/fpm-buster/Dockerfile)
+-	[`9.1.5-php7.4-fpm-alpine3.12`, `9.1-php7.4-fpm-alpine3.12`, `9-php7.4-fpm-alpine3.12`, `php7.4-fpm-alpine3.12`, `9.1.5-php7.4-fpm-alpine`, `9.1-php7.4-fpm-alpine`, `9-php7.4-fpm-alpine`, `php7.4-fpm-alpine`](https://github.com/docker-library/drupal/blob/ffe1d40f37f93e122f43a0f45cd607eb6a98fe4c/9.1/php7.4/fpm-alpine3.12/Dockerfile)
+-	[`9.0.11-php7.4-apache-buster`, `9.0-php7.4-apache-buster`, `9.0.11-php7.4-apache`, `9.0-php7.4-apache`, `9.0.11-apache-buster`, `9.0-apache-buster`, `9.0.11-apache`, `9.0-apache`, `9.0.11`, `9.0`, `9.0.11-php7.4`, `9.0-php7.4`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/9.0/php7.4/apache-buster/Dockerfile)
+-	[`9.0.11-php7.4-fpm-buster`, `9.0-php7.4-fpm-buster`, `9.0.11-php7.4-fpm`, `9.0-php7.4-fpm`, `9.0.11-fpm-buster`, `9.0-fpm-buster`, `9.0.11-fpm`, `9.0-fpm`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/9.0/php7.4/fpm-buster/Dockerfile)
+-	[`9.0.11-php7.4-fpm-alpine3.12`, `9.0-php7.4-fpm-alpine3.12`, `9.0.11-php7.4-fpm-alpine`, `9.0-php7.4-fpm-alpine`, `9.0.11-fpm-alpine3.12`, `9.0-fpm-alpine3.12`, `9.0.11-fpm-alpine`, `9.0-fpm-alpine`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/9.0/php7.4/fpm-alpine3.12/Dockerfile)
+-	[`8.9.13-php7.4-apache-buster`, `8.9-php7.4-apache-buster`, `8-php7.4-apache-buster`, `8.9.13-php7.4-apache`, `8.9-php7.4-apache`, `8-php7.4-apache`, `8.9.13-apache-buster`, `8.9-apache-buster`, `8-apache-buster`, `8.9.13-apache`, `8.9-apache`, `8-apache`, `8.9.13`, `8.9`, `8`, `8.9.13-php7.4`, `8.9-php7.4`, `8-php7.4`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/8.9/php7.4/apache-buster/Dockerfile)
+-	[`8.9.13-php7.4-fpm-buster`, `8.9-php7.4-fpm-buster`, `8-php7.4-fpm-buster`, `8.9.13-php7.4-fpm`, `8.9-php7.4-fpm`, `8-php7.4-fpm`, `8.9.13-fpm-buster`, `8.9-fpm-buster`, `8-fpm-buster`, `8.9.13-fpm`, `8.9-fpm`, `8-fpm`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/8.9/php7.4/fpm-buster/Dockerfile)
+-	[`8.9.13-php7.4-fpm-alpine3.12`, `8.9-php7.4-fpm-alpine3.12`, `8-php7.4-fpm-alpine3.12`, `8.9.13-php7.4-fpm-alpine`, `8.9-php7.4-fpm-alpine`, `8-php7.4-fpm-alpine`, `8.9.13-fpm-alpine3.12`, `8.9-fpm-alpine3.12`, `8-fpm-alpine3.12`, `8.9.13-fpm-alpine`, `8.9-fpm-alpine`, `8-fpm-alpine`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/8.9/php7.4/fpm-alpine3.12/Dockerfile)
+-	[`7.78-php7.4-apache-buster`, `7-php7.4-apache-buster`, `7.78-php7.4-apache`, `7-php7.4-apache`, `7.78-apache-buster`, `7-apache-buster`, `7.78-apache`, `7-apache`, `7.78`, `7`, `7.78-php7.4`, `7-php7.4`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/7/php7.4/apache-buster/Dockerfile)
+-	[`7.78-php7.4-fpm-buster`, `7-php7.4-fpm-buster`, `7.78-php7.4-fpm`, `7-php7.4-fpm`, `7.78-fpm-buster`, `7-fpm-buster`, `7.78-fpm`, `7-fpm`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/7/php7.4/fpm-buster/Dockerfile)
+-	[`7.78-php7.4-fpm-alpine3.12`, `7-php7.4-fpm-alpine3.12`, `7.78-php7.4-fpm-alpine`, `7-php7.4-fpm-alpine`, `7.78-fpm-alpine3.12`, `7-fpm-alpine3.12`, `7.78-fpm-alpine`, `7-fpm-alpine`](https://github.com/docker-library/drupal/blob/1eca4a1de50210dce5d1b443e002e728a838f6b6/7/php7.4/fpm-alpine3.12/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/drupal/issues](https://github.com/docker-library/drupal/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/drupal/), [`arm32v5`](https://hub.docker.com/r/arm32v5/drupal/), [`arm32v6`](https://hub.docker.com/r/arm32v6/drupal/), [`arm32v7`](https://hub.docker.com/r/arm32v7/drupal/), [`arm64v8`](https://hub.docker.com/r/arm64v8/drupal/), [`i386`](https://hub.docker.com/r/i386/drupal/), [`ppc64le`](https://hub.docker.com/r/ppc64le/drupal/)
+	[`amd64`](https://hub.docker.com/r/amd64/drupal/), [`arm32v5`](https://hub.docker.com/r/arm32v5/drupal/), [`arm32v6`](https://hub.docker.com/r/arm32v6/drupal/), [`arm32v7`](https://hub.docker.com/r/arm32v7/drupal/), [`arm64v8`](https://hub.docker.com/r/arm64v8/drupal/), [`i386`](https://hub.docker.com/r/i386/drupal/), [`mips64le`](https://hub.docker.com/r/mips64le/drupal/), [`ppc64le`](https://hub.docker.com/r/ppc64le/drupal/), [`s390x`](https://hub.docker.com/r/s390x/drupal/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/drupal/` directory](https://github.com/docker-library/repo-info/blob/master/repos/drupal) ([history](https://github.com/docker-library/repo-info/commits/master/repos/drupal))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/drupal`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fdrupal)  
+	[official-images repo's `library/drupal` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fdrupal)  
 	[official-images repo's `library/drupal` file](https://github.com/docker-library/official-images/blob/master/library/drupal) ([history](https://github.com/docker-library/official-images/commits/master/library/drupal))
 
 -	**Source of this description**:  
@@ -81,23 +89,39 @@ When first accessing the webserver provided by this image, it will go through a 
 
 ## MySQL
 
+For using Drupal with a MySQL database you'll want to run a [MySQL](https://hub.docker.com/_/mysql/) container and configure it using environment variables for `MYSQL_DATABASE`, `MYSQL_USER`, `MYSQL_PASSWORD`, and `MYSQL_ROOT_PASSWORD`
+
 ```console
-$ docker run --name some-drupal --network some-network -d drupal
+$ docker run -d --name some-mysql --network some-network \
+	-e MYSQL_DATABASE=drupal \
+	-e MYSQL_USER=user \
+	-e MYSQL_PASSWORD=password \
+	-e MYSQL_ROOT_PASSWORD=password \
+mysql:5.7
 ```
 
--	Database type: `MySQL, MariaDB, or equivalent`
+In Drupal's "set up database" step on the web installation walkthrough enter the values for the environment variables you provided
+
 -	Database name/username/password: `<details for accessing your MySQL instance>` (`MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`; see environment variables in the description for [`mysql`](https://hub.docker.com/_/mysql/))
--	ADVANCED OPTIONS; Database host: `some-mysql` (for using the DNS entry added by `--network` to access the MySQL container)
+-	ADVANCED OPTIONS; Database host: `some-mysql` (Containers on the same [docker-network](https://docs.docker.com/v17.09/engine/userguide/networking/) are routable by their container-name)
 
 ## PostgreSQL
 
+For using Drupal with a PostgreSQL database you'll want to run a [Postgres](https://hub.docker.com/_/postgres) container and configure it using environment variables for `POSTGRES_DB`, `POSTGRES_USER`, and `POSTGRES_PASSWORD`
+
 ```console
-$ docker run --name some-drupal --network some-network -d drupal
+$ docker run -d --name some-postgres --network some-network \
+	-e POSTGRES_DB=drupal \
+	-e POSTGRES_USER=user \
+	-e POSTGRES_PASSWORD=pass \
+postgres:11
 ```
 
+In Drupal's "set up database" step on the web installation walkthrough enter the values for the environment variables you provided
+
 -	Database type: `PostgreSQL`
--	Database name/username/password: `<details for accessing your PostgreSQL instance>` (`POSTGRES_USER`, `POSTGRES_PASSWORD`; see environment variables in the description for [`postgres`](https://hub.docker.com/_/postgres/))
--	ADVANCED OPTIONS; Database host: `some-postgres` (for using the DNS entry added by `--network` to access the PostgreSQL container)
+-	Database name/username/password: `<details for accessing your PostgreSQL instance>` (`POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`; see environment variables in the description for [`postgres`](https://hub.docker.com/_/postgres/))
+-	ADVANCED OPTIONS; Database host: `some-postgres` (Containers on the same [docker-network](https://docs.docker.com/v17.09/engine/userguide/networking/) are routable by their container-name)
 
 ## Volumes
 
@@ -203,13 +227,21 @@ The `drupal` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `drupal:<version>-alpine`
+Some of these tags may have names like buster in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+## `drupal:<version>-fpm`
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant contains PHP-FPM, which is a FastCGI implementation for PHP. See [the PHP-FPM website](https://php-fpm.org/) for more information about PHP-FPM.
 
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+In order to use this image variant, some kind of reverse proxy (such as NGINX, Apache, or other tool which speaks the FastCGI protocol) will be required.
+
+Some potentially helpful resources:
+
+-	[PHP-FPM.org](https://php-fpm.org/)
+-	[simplified example by @md5](https://gist.github.com/md5/d9206eacb5a0ff5d6be0)
+-	[very detailed article by Pascal Landau](https://www.pascallandau.com/blog/php-php-fpm-and-nginx-on-docker-in-windows-10/)
+-	[Stack Overflow discussion](https://stackoverflow.com/q/29905953/433558)
+-	[Apache httpd Wiki example](https://wiki.apache.org/httpd/PHPFPMWordpress)
 
 # License
 

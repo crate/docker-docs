@@ -14,21 +14,23 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`7.4.2`](https://github.com/docker-library/kibana/blob/8533a0adbbcf829e6d069fa033339d9212fb986b/7/Dockerfile)
--	[`6.8.4`](https://github.com/docker-library/kibana/blob/f59b7cc2287c2ad6d23ebe77e8409ac56ec453ca/6/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[the Elastic Team](https://github.com/elastic/kibana)
 
 -	**Where to get help**:  
 	the [Kibana Discuss Forums](https://discuss.elastic.co/c/kibana), the [Elastic community](https://www.elastic.co/community)
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`7.11.2`](https://github.com/docker-library/kibana/blob/26d3606c64d6abb047aa74e6b7f4c22cc3fc5a4f/7/Dockerfile)
+-	[`6.8.14`](https://github.com/docker-library/kibana/blob/a813600132694cac07a88cc664e9514fe182707d/6/Dockerfile)
+
+# Quick reference (cont.)
+
 -	**Where to file issues**:  
 	For issues with the Kibana Docker image or Kibana: https://github.com/elastic/kibana/issues
-
--	**Maintained by**:  
-	[the Elastic Team](https://github.com/elastic/kibana)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/kibana/)
@@ -38,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/kibana`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fkibana)  
+	[official-images repo's `library/kibana` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fkibana)  
 	[official-images repo's `library/kibana` file](https://github.com/docker-library/official-images/blob/master/library/kibana) ([history](https://github.com/docker-library/official-images/commits/master/library/kibana))
 
 -	**Source of this description**:  
